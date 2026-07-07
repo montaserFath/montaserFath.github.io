@@ -12,13 +12,11 @@
         <div class="header-profile-picture"></div>
         <div class="header-text">
             <div class="header-name">
-                <h1>Montaser Mohammedalamen</h1>
+                <h1>Montaser Mohammedalamen, PhD</h1>
             </div>
-            <div class="header-subtitle">
-                PhD student, University of Alberta
-            </div>
+            <div class="header-subtitle">PhD student, University of Alberta</div>
             <div class="header-links">
-                <a class="btn" href="mailto:mohmmeda@ualberta.ca"> <span class="bold">Email: mohmmeda</span> [at] <span class="bold">ualberta</span>.ca</a> |
+                <a class="btn" href="mailto:mohmmeda@ualberta.ca"><span class="bold">Email: mohmmeda</span> [at] <span class="bold">ualberta</span>.ca</a> |
                 <a class="btn" href="https://scholar.google.ca/citations?user=ZY882-kAAAAJ&hl">Google Scholar</a> |
                 <a class="btn" href="https://github.com/montaserFath/">GitHub</a> |
                 <a class="btn" href="https://www.linkedin.com/in/montaser-mohammedalamen/">LinkedIn</a> |
@@ -37,66 +35,91 @@
 </div>
 
 <div class="content" style="padding-bottom: 64px;">
-    <div>
-        <h1 class="noselect">Projects</h1>
+    <h2 class="tab-heading noselect">Projects</h2>
 
-        <div class="publication row clearfix">
-            <div class="row-media" style="background-image: url(../fig/bco.gif);"></div>
-            <div class="row-text">
-                <span class="bold">Implementation for Behavior Cloning (BC) and <a href="https://arxiv.org/abs/1805.01954">Behavior Cloning from Observation (BCO) algorithms in PyTorch</a></span><br/>
-                Imitation learning algorithms.<br/>
-                <a href="https://github.com/montaserFath/BCO">GitHub repo</a><br/>
-            </div>
+    <h3 class="pub-section-heading">Ongoing</h3>
+
+    <div class="publication row clearfix">
+        <div class="row-text" style="max-width: 100%; margin-left: 0;">
+            <span class="bold">RL for LLMs Risk Assessment</span> &nbsp;<span class="proj-tag">Generative Models Safety</span><br/>
+            <ul class="exp-list">
+                <li>Tech Lead, developing a three-stage optimization framework that reframes generative model jailbreaking as a sequential decision problem. The system structurally decomposes environmental and algorithmic components to isolate the core drivers of adversarial success, scales exploitation pipelines across multi-modal action spaces (text, vision, and audio), and embeds these insights into a unified two-player zero-sum game.</li>
+            </ul>
         </div>
+    </div>
 
-        <div class="publication row clearfix">
-            <div class="row-media" style="background-image: url(../fig/brain_control.gif);"></div>
-            <div class="row-text">
-                <span class="bold">Wheelchair Robot Controlled by Brain Signal</span><br/>
-                Develop a wheelchair robot that helps disabled people move using EEG signals from the brain.<br/>
-                <a href="https://github.com/montaserFath/Wheelchair-controlled-by-Brain-Signal">GitHub repo</a><br/>
-            </div>
+    <div class="publication row clearfix">
+        <div class="row-text" style="max-width: 100%; margin-left: 0;">
+            <span class="bold">Learning to Be Cautious for Industrial Chemical Control</span> &nbsp;<span class="proj-tag">Critical Applications Safety</span><br/>
+            <ul class="exp-list">
+                <li>Generalized the "learning to be cautious" framework to continuous action spaces, extending its mathematical applicability to high-dimensional, safety-critical settings. Validated on complex chemical process control benchmarks, bridging the gap between theoretical safe RL and real-world industrial deployments.</li>
+            </ul>
         </div>
+    </div>
 
-        <div class="publication row clearfix">
-            <div class="row-media" style="background-image: url(../fig/rl_leg.jpeg);"></div>
-            <div class="row-text">
-                <span class="bold">NeurIPS 2018 Challenge: RL for Prosthetics</span><br/>
-                Build an RL Prosthetics controller that learns to walk like humans, and uses Imitation Learning to accelerate learning.<br/>
-                <a href="https://github.com/montaserFath/Reinforcement-Learning-for-Prosthetics">GitHub repo</a><br/>
-            </div>
+    <div class="publication row clearfix">
+        <div class="row-text" style="max-width: 100%; margin-left: 0;">
+            <span class="bold">Plasticity Loss in Monitored MDPs</span> &nbsp;<span class="proj-tag">Continual RL</span><br/>
+            <ul class="exp-list">
+                <li>Investigating structural mechanisms of plasticity loss within Mon-MDPs to preserve agent adaptability during continual learning. Analyzing how the dual-learning architecture compounds long-term performance degradation, and formulating a systematic framework to evaluate intrinsic vulnerabilities while adapting regularization and reset mitigation strategies.</li>
+            </ul>
         </div>
+    </div>
 
-        <div class="publication row clearfix">
-            <div class="row-media" style="background-image: url(../fig/mon_mdp.png);"></div>
-            <div class="row-text">
-                <span class="bold">Monitored Markov Decision Processes</span><br/>
-                RL assumes that the reward is observable to the agent all the time, but is often not applicable in some real-world problems. Mon-MDPs present a new framework to
-                tackle that by discussing the theoretical and practical consequences of this setting.<br/>
-                <a href="https://github.com/montaserFath/MonMDP">GitHub repo</a><br/>
-            </div>
+    <h3 class="pub-section-heading">Previous</h3>
+
+    <div class="publication row clearfix">
+        <div class="row-media" style="background-image: url(../fig/mon_mdp.png);"></div>
+        <div class="row-text">
+            <span class="bold">Monitored Markov Decision Processes</span> &nbsp;<span class="proj-tag">Theoretical &amp; Practical Evaluation</span><br/>
+            Addressed settings where reward structures are unobservable to the agent, analyzing consequences across varied testing scenarios.<br/>
+            <a class="btn btn-red" href="https://arxiv.org/abs/2505.08988">arXiv</a> | <a class="btn" href="https://github.com/montaserFath/MonMDP">code</a>
         </div>
+    </div>
 
-        <div class="publication row clearfix">
-            <div class="row-media" style="background-image: url(../fig/LBC.png);"></div>
-            <div class="row-text">
-                <span class="bold">Learning to Be Cautious</span><br/>
-                An algorithm that automatically behaves cautiously and safely in novel circumstances, without prior knowledge or human supervision.<br/>
-                <a href="https://github.com/montaserFath/Learning-to-be-Cautious">GitHub repo</a><br/>
-            </div>
+    <div class="publication row clearfix">
+        <div class="row-media" style="background-image: url(../fig/LBC.png);"></div>
+        <div class="row-text">
+            <span class="bold">Learning to Be Cautious</span> &nbsp;<span class="proj-tag">Robust Optimization</span><br/>
+            Constructed parameters enabling systems to safely deploy context-aware behavior patterns dynamically within unfamiliar boundaries.<br/>
+            <a class="btn" href="https://github.com/montaserFath/Learning-to-be-Cautious">code</a>
         </div>
+    </div>
 
-        <div class="publication row clearfix">
-            <div class="row-media" style="background-image: url(../fig/ddpg.gif);"></div>
-            <div class="row-text">
-                <span class="bold">Benchmark <a href="https://github.com/chainer/chainerrl">ChainerRL library in OpenAI Gym Environments</a></span><br/>
-                Benchmarking RL algorithms: Deterministic Policy Gradient <a href="https://arxiv.org/abs/1509.02971">(DDPG)</a>, Trust Region Policy Optimization
-                <a href="http://proceedings.mlr.press/v37/schulman15.pdf">(TRPO)</a> and Proximal Policy Optimization
-                <a href="https://arxiv.org/abs/1707.06347">(PPO)</a> algorithms.<br/>
-                <a href="https://github.com/montaserFath/Benchmark-ChainerRL-library-in-Gym-Environments">GitHub repo</a><br/>
-            </div>
+    <div class="publication row clearfix">
+        <div class="row-media" style="background-image: url(../fig/bco.gif);"></div>
+        <div class="row-text">
+            <span class="bold">Behavior Cloning (BC) and <a href="https://arxiv.org/abs/1805.01954">BCO</a> in PyTorch</span><br/>
+            Imitation learning algorithm implementations.<br/>
+            <a class="btn" href="https://github.com/montaserFath/BCO">code</a>
         </div>
+    </div>
 
+    <div class="publication row clearfix">
+        <div class="row-media" style="background-image: url(../fig/brain_control.gif);"></div>
+        <div class="row-text">
+            <span class="bold">Wheelchair Robot Controlled by Brain Signal</span><br/>
+            A wheelchair robot that helps disabled people move using EEG signals from the brain.<br/>
+            <a class="btn" href="https://github.com/montaserFath/Wheelchair-controlled-by-Brain-Signal">code</a>
+        </div>
+    </div>
+
+    <div class="publication row clearfix">
+        <div class="row-media" style="background-image: url(../fig/rl_leg.jpeg);"></div>
+        <div class="row-text">
+            <span class="bold">NeurIPS 2018 Challenge: RL for Prosthetics</span><br/>
+            RL Prosthetics controller that learns to walk like humans, accelerated with Imitation Learning.<br/>
+            <a class="btn" href="https://github.com/montaserFath/Reinforcement-Learning-for-Prosthetics">code</a>
+        </div>
+    </div>
+
+    <div class="publication row clearfix">
+        <div class="row-media" style="background-image: url(../fig/ddpg.gif);"></div>
+        <div class="row-text">
+            <span class="bold">Benchmark <a href="https://github.com/chainer/chainerrl">ChainerRL</a> in OpenAI Gym</span><br/>
+            Benchmarking DDPG, TRPO, and PPO algorithms across standard continuous-control environments.<br/>
+            <a class="btn" href="https://github.com/montaserFath/Benchmark-ChainerRL-library-in-Gym-Environments">code</a>
+        </div>
     </div>
 </div>
 

@@ -60,6 +60,9 @@ p {line-height: 1.5em;}
 .pub-list {padding-left: 20px; margin: 0 0 4px;}
 .pub-list li {margin-bottom: 14px; line-height: 1.6em;}
 
+/* ── Project category tag ── */
+.proj-tag {display: inline-block; font-size: 0.78em; color: #2471a3; background: #edf4fb; border: 1px solid #c8ddf0; border-radius: 10px; padding: 1px 8px; vertical-align: middle; margin-left: 4px;}
+
 /* ── Experience bullet list ── */
 .exp-list {margin: 6px 0 0 0; padding-left: 18px; line-height: 1.55em;}
 .exp-list li {margin-bottom: 5px;}
