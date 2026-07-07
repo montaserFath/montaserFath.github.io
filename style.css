@@ -55,6 +55,10 @@ p {line-height: 1.5em;}
 .footer-content a:hover {color: #f09228 !important;}
 .stars {font-size: 10px; display: inline-block; margin-left: 6px; color: #666;}
 
+/* ── Experience bullet list ── */
+.exp-list {margin: 6px 0 0 0; padding-left: 18px; line-height: 1.55em;}
+.exp-list li {margin-bottom: 5px;}
+
 /* ── Updates timeline ── */
 .updates-list {list-style: none; padding: 0; margin: 0;}
 .update-item {display: flex; gap: 20px; padding: 14px 0; border-bottom: 1px solid #edf0f3; align-items: baseline;}
