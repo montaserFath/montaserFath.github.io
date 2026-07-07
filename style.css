@@ -55,6 +55,11 @@ p {line-height: 1.5em;}
 .footer-content a:hover {color: #f09228 !important;}
 .stars {font-size: 10px; display: inline-block; margin-left: 6px; color: #666;}
 
+/* ── Publication section headings & numbered list ── */
+.pub-section-heading {font-size: 1em; font-weight: bold; color: #234; margin: 28px 0 10px; text-transform: uppercase; letter-spacing: 0.04em; border-bottom: 1px solid #e8ecf0; padding-bottom: 4px;}
+.pub-list {padding-left: 20px; margin: 0 0 4px;}
+.pub-list li {margin-bottom: 14px; line-height: 1.6em;}
+
 /* ── Experience bullet list ── */
 .exp-list {margin: 6px 0 0 0; padding-left: 18px; line-height: 1.55em;}
 .exp-list li {margin-bottom: 5px;}
