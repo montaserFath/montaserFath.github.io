@@ -14,6 +14,8 @@ h1, h2, h3, h4, h5, a, p, span, body, div {font-weight: normal; font-family: 'La
 .header-text {flex: 1; min-width: 200px;}
 .header-name h1 {margin: 0 0 4px;}
 .header-subtitle {margin-bottom: 10px; color: #556; font-size: 0.95em;}
+.header-subtitle a {color: #2471a3;}
+.header-subtitle a:hover {color: #f09228;}
 .header-links {display: flex; flex-wrap: wrap; gap: 4px; align-items: center;}
 
 /* ── Layout ── */
