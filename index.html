@@ -1,18 +1,20 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
     <title>Montaser Mohammedalamen</title>
     <meta name="author" content="Montaser Mohammedalamen">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:title" content="ontaser Mohammedalamen">
-	    <meta property="og:description" content="PhD student, University of Alberta">
+    <meta property="og:title" content="Montaser Mohammedalamen">
+    <meta property="og:description" content="PhD student, University of Alberta">
     <meta property="og:image" content="https://montaserFath.github.io/fig/id.png">
-        <meta property="og:url" content="https://montaserFath.github.io/">
-        <meta name="twitter:card" content="summary_large_image">
-	<meta property="og:url" content="https://montaserFath.github.io/">
+    <meta property="og:url" content="https://montaserFath.github.io/">
+    <meta name="twitter:card" content="summary_large_image">
     <link rel="manifest" href="content/site.web">
     <link rel="stylesheet" href="style.css">
 </head>
+<body>
 
+<!-- ── Header ── -->
 <div class="header noselect">
     <div class="content row">
         <div class="header-profile-picture"></div>
@@ -24,7 +26,7 @@
                 PhD student, University of Alberta
             </div>
             <div class="header-links">
-                <a class="btn" href="mailto:mohmmeda@ualberta.ca"> <span class="bold">Email: mohmmeda</span> [at] <span class="bold">ualberta</span>.ca</a> |
+                <a class="btn" href="mailto:mohmmeda@ualberta.ca"><span class="bold">Email: mohmmeda</span> [at] <span class="bold">ualberta</span>.ca</a> |
                 <a class="btn" href="https://scholar.google.ca/citations?user=ZY882-kAAAAJ&hl">Google Scholar</a> |
                 <a class="btn" href="https://github.com/montaserFath/">GitHub</a> |
                 <a class="btn" href="https://www.linkedin.com/in/montaser-mohammedalamen/">LinkedIn</a> |
@@ -33,69 +35,79 @@
         </div>
     </div>
 </div>
-<div class="content" style="padding-bottom: 64px;">
-    <div>
+
+<!-- ── Tab bar ── -->
+<div class="tabs-bar">
+    <div class="tabs-inner">
+        <button class="tab-btn active" data-tab="about">About</button>
+        <button class="tab-btn" data-tab="experience">Work Experience</button>
+        <button class="tab-btn" data-tab="publications">Publications</button>
+        <button class="tab-btn" data-tab="education">Education</button>
+        <button class="tab-btn" data-tab="awards">Scholarships &amp; Awards</button>
+        <button class="tab-btn" data-tab="projects">Projects</button>
+    </div>
+</div>
+
+<!-- ── Tab panels ── -->
+<div class="content tab-content" style="padding-bottom: 64px;">
+
+    <!-- About -->
+    <div id="tab-about" class="tab-panel active">
         <p>
             I am a PhD student at <a href="https://www.ualberta.ca/computing-science/index.html">the Computing Sciences Department, University of Alberta, Canada</a>, advised by Prof.
-            <a href="https://webdocs.cs.ualberta.ca/~bowling/">Michael Bowling</a>. 
-            My research work focuses on how AI systems learn if feedback is not always observable. How do design agents learn to avoid causing harm to humans or other agents or being 
+            <a href="https://webdocs.cs.ualberta.ca/~bowling/">Michael Bowling</a>.
+            My research work focuses on how AI systems learn if feedback is not always observable. How do design agents learn to avoid causing harm to humans or other agents or being
             destructive to the environment or themselves without human supervision
             or prior knowledge?<br><br>
-            Before starting PhD, I was an AI engineer at <a href="https://ai.sony/">SonyAI</a> for three years, working on designing a multi-agent high-dynamic environment in a 
+            Before starting PhD, I was an AI engineer at <a href="https://ai.sony/">SonyAI</a> for three years, working on designing a multi-agent high-dynamic environment in a
             physics simulator, training robust agents cooperatively and competitively
             with self-play and goal-conditioned RL, transferring learned policies to the real world, and integrating them with vision systems and robot control methods.
         </p>
     </div>
 
-    <div>
-        <h1 class="noselect">Work Experience:</h1>
-    
+    <!-- Work Experience -->
+    <div id="tab-experience" class="tab-panel">
+        <h2 class="tab-heading noselect">Work Experience</h2>
+
         <div class="publication row clearfix">
-            <div class="row-media-small" style="background-image: url(fig/sonyai.png);"></div>            <div class="row-text">
-                <a class="bold">AI Engineer, <a href="https://ai.sony/">SonyAI</a></a><br/>
-                Designing a Multi-agent high dynamic environment in a physics simulator, Training robust agents cooperatively and competitively with Self-play and Goal-conditioned RL, 
-                transfers learned policies to the world and integrates them with 
+            <div class="row-media-small" style="background-image: url(fig/sonyai.png);"></div>
+            <div class="row-text">
+                <span class="bold">AI Engineer, <a href="https://ai.sony/">SonyAI</a></span><br/>
+                Designing a Multi-agent high dynamic environment in a physics simulator, Training robust agents cooperatively and competitively with Self-play and Goal-conditioned RL,
+                transfers learned policies to the world and integrates them with
                 vision systems and robot control methods. Direct manager <a href="https://ai.sony/people/Peter-Duerr/">Peter Duerr</a>.<br/>
                 Tokyo, Japan<br/>
-                June 2020 - October 2022 (remotely June 2020 - October 2020)<br/>
+                June 2020 – October 2022 (remotely June 2020 – October 2020)<br/>
             </div>
         </div>
 
         <div class="publication row clearfix">
-            <div class="row-media-small" style="background-image: url(fig/uofa.png);"></div>            <div class="row-text">
-                <a class="bold">Research Associate, <a href="https://www.ualberta.ca/computing-science/index.html">University of Alberta</a></a><br/>
-                Develop an algorithm that automatically behaves cautiously in novel circumstances using robust optimization. 
+            <div class="row-media-small" style="background-image: url(fig/uofa.png);"></div>
+            <div class="row-text">
+                <span class="bold">Research Associate, <a href="https://www.ualberta.ca/computing-science/index.html">University of Alberta</a></span><br/>
+                Develop an algorithm that automatically behaves cautiously in novel circumstances using robust optimization.
                 Supervised by Prof <a href="https://webdocs.cs.ualberta.ca/~bowling/">Michael Bowling</a>.<br/>
                 Edmonton, Canada<br/>
-                February 2020 - December 2020<br/>
+                February 2020 – December 2020<br/>
             </div>
         </div>
-
-
-        <!-- <div class="publication row clearfix">
-            <div class="row-media-small" style="background-image: url(fig/sonyai.png);"></div>            <div class="row-text">
-                <a class="bold">AI Engineer, <a href="https://ai.sony/">SonyAI</a></a><br/>
-                Develop Reinforcement Learning algorithms for skill acquisition via imitation learning in cooking robots with visual feedback. 
-                Direct manager <a href="https://ai.sony/people/Michael-Spranger/">Michael Spranger</a>.<br/>
-                Tokyo, Japan (remotely)<br/>
-                June 2020 - October 2020<br/>
-            </div>
-        </div> -->
 
         <div class="publication row clearfix">
-            <div class="row-media-small" style="background-image: url(fig/sony.png);"></div>            <div class="row-text">
-                <a class="bold"> Machine learning Intern, <a href="https://sony.com/">Sony</a></a><br/>
-                Develop Reinforcement Learning algorithms for skill acquisition via imitation learning in cooking robots with visual feedback. 
+            <div class="row-media-small" style="background-image: url(fig/sony.png);"></div>
+            <div class="row-text">
+                <span class="bold">Machine Learning Intern, <a href="https://sony.com/">Sony</a></span><br/>
+                Develop Reinforcement Learning algorithms for skill acquisition via imitation learning in cooking robots with visual feedback.
                 Direct manager <a href="https://ai.sony/people/Michael-Spranger/">Michael Spranger</a>.<br/>
                 Tokyo, Japan<br/>
-                July 2019 - Jan 2020<br/>
+                July 2019 – Jan 2020<br/>
             </div>
         </div>
-
     </div>
 
-    <div>
-        <h1 class="noselect">Publications:</h1>
+    <!-- Publications -->
+    <div id="tab-publications" class="tab-panel">
+        <h2 class="tab-heading noselect">Publications</h2>
+
         <div class="publication row clearfix">
             <div class="row-media" style="background-image: url(fig/LBC.png);"></div>
             <div class="row-text">
@@ -106,6 +118,7 @@
                 <a class="btn btn-dark" href="https://youtu.be/t-pxmpCYHtA?si=qGmhcsEXPmPQQ07m">Talk</a>
             </div>
         </div>
+
         <div class="publication row clearfix">
             <div class="row-media" style="background-image: url(fig/gen_mon_mdp.gif);"></div>
             <div class="row-text">
@@ -113,9 +126,9 @@
                 <span class="bold">Montaser Mohammedalamen</span>, and Michael Bowling<br/>
                 <span class="italic">Under review</span>, 2025<br/>
                 <a class="btn btn-red" href="https://arxiv.org/abs/2110.15907">arXiv</a> | <a class="btn" href="https://github.com/montaserFath/MonMDP">code</a> | <a class="btn btn-dark" href="content/mon_mdp.bib">bibtex</a>
-                <!-- <a class="btn btn-dark" href="https://youtu.be/3gM3b1uum9Y?si=Afbvr0NNyyIb1x1N">| Talk</a> -->
             </div>
         </div>
+
         <div class="publication row clearfix">
             <div class="row-media" style="background-image: url(fig/mon_mdp.png);"></div>
             <div class="row-text">
@@ -127,84 +140,89 @@
                 <a class="btn btn-dark" href="https://youtu.be/3gM3b1uum9Y?si=Afbvr0NNyyIb1x1N">Talk</a>
             </div>
         </div>
+
         <div class="publication row clearfix">
             <div class="row-media" style="background-image: url(fig/transfer.gif);"></div>
             <div class="row-text">
                 <a class="publication-title bold" href="https://arxiv.org/abs/1901.04772v1">Transfer Learning for Prosthetics Using Imitation Learning</a><br/>
-                D. Khamies,<span class="bold">Montaser Mohammedalamen</span>, and Benjamin Rosman<br/>
+                D. Khamies, <span class="bold">Montaser Mohammedalamen</span>, and Benjamin Rosman<br/>
                 <span class="italic">Black in AI workshop, NeurIPS</span>, 2018<br/>
                 <a class="btn btn-red" href="https://arxiv.org/abs/1901.04772v1">arXiv</a> | <a class="btn" href="https://github.com/montaserFath/Reinforcement-Learning-for-Prosthetics">code</a> |
                 <a class="btn btn-dark" href="content/transfer.bib">bibtex</a>
             </div>
         </div>
-
     </div>
-    <div>
-        <h1 class="noselect">Education:</h1>
+
+    <!-- Education -->
+    <div id="tab-education" class="tab-panel">
+        <h2 class="tab-heading noselect">Education</h2>
+
         <div class="publication row clearfix">
             <div class="row-media-small" style="background-image: url(fig/uofa.png);"></div>
             <div class="row-text">
-                <a class="bold">PhD student</a><br/>
-                <a href="https://www.ualberta.ca/computing-science/index.html">Computing Science department</a>, University of Albert, Canada<br/>
-                Janunary 2022 - September 2027(expected)<br/>
+                <span class="bold">PhD Student</span><br/>
+                <a href="https://www.ualberta.ca/computing-science/index.html">Computing Science Department</a>, University of Alberta, Canada<br/>
+                January 2022 – September 2027 (expected)<br/>
             </div>
         </div>
+
         <div class="publication row clearfix">
             <div class="row-media-small" style="background-image: url(fig/AIMS.png);"></div>
             <div class="row-text">
-                <a class="bold">M.Sc. Machine Intelligence</a><br/>
+                <span class="bold">M.Sc. Machine Intelligence</span><br/>
                 African Master in Machine Intelligence (<a href="https://aims-ammi.org/">AMMI</a>), African Institute for Mathematical Sciences (<a href="https://aims.ac.rw/">AIMS</a>), Rwanda<br/>
-                September 2018 - September 2019<br/>
-            </div>
-        </div>
-        <div class="publication row clearfix">
-            <div class="row-media-small" style="background-image: url(fig/uofk.png);"></div><div class="row-text">
-                <a class="bold">B.S.c, Honors Electronics & Computer Engineering</a><br/>
-                First Class Honors, <a href="https://www.uofk.edu/index.php/en/">University of Khartoum</a>, Sudan (ranked 3rd in the Electronics department, CGPA 7.5/10)<br/>
-                August 2013 - September 2018<br/>
-            </div>
-        </div>
-    </div>
-
-
-    <div>
-        <h1 class="noselect">Scholarships & Awards:</h1>
-
-        <div class="publication row clearfix">
-            <div class="row-media-small" style="background-image: url(fig/uofa.png);"></div>
-            <div class="row-text">
-                <a class="bold"> <a href="https://www.ualberta.ca/en/graduate-studies/fees-funding/scholarships-awards/engagement-scholarship.html">Graduate Student Engagement Scholarship (GSES)</a><br/>
-                <a href="https://www.ualberta.ca/en/graduate-studies/fees-funding/scholarships-awards/engagement-scholarship.html">University of Alberta</a><br/>
-                10,000 CAD<br/>
-                September 2023 - August 2024<br/>
-            </div>
-        </div>
-        
-
-        <div class="publication row clearfix">
-            <div class="row-media-small" style="background-image: url(fig/uofa.png);"></div>
-            <div class="row-text">
-                <a class="bold"> <a href="https://www.ualberta.ca/en/graduate-studies/fees-funding/scholarships-awards/engagement-scholarship.html">Graduate Student Engagement Scholarship (GSES)</a><br/>
-                <a href="https://www.ualberta.ca/en/graduate-studies/fees-funding/scholarships-awards/engagement-scholarship.html">University of Alberta</a><br/>
-                10,000 CAD<br/>
-                September 2022 - August 2023<br/>
-            </div>
-        </div>
-        
-        <div class="publication row clearfix">
-            <div class="row-media-small" style="background-image: url(fig/AIMS.png);"></div>
-            <div class="row-text">
-                <a class="bold"> African Master in Machine Intelligence (<a href="https://aims-ammi.org/">AMMI</a>)</a><br/>
-                African Institute for Mathematical Sciences (<a href="https://aims.ac.rw/">AIMS</a>), Rwanda.<br/> 4% acceptance rate Africa-wide<br/>
-                15,000 USD<br/>
-                August 2018 - September 2019<br/>
+                September 2018 – September 2019<br/>
             </div>
         </div>
 
         <div class="publication row clearfix">
             <div class="row-media-small" style="background-image: url(fig/uofk.png);"></div>
             <div class="row-text">
-                <a class="bold">The best Undergraduate research project</a><br/>
+                <span class="bold">B.Sc. (Honors), Electronics &amp; Computer Engineering</span><br/>
+                First Class Honors, <a href="https://www.uofk.edu/index.php/en/">University of Khartoum</a>, Sudan (ranked 3rd in the Electronics department, CGPA 7.5/10)<br/>
+                August 2013 – September 2018<br/>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scholarships & Awards -->
+    <div id="tab-awards" class="tab-panel">
+        <h2 class="tab-heading noselect">Scholarships &amp; Awards</h2>
+
+        <div class="publication row clearfix">
+            <div class="row-media-small" style="background-image: url(fig/uofa.png);"></div>
+            <div class="row-text">
+                <span class="bold"><a href="https://www.ualberta.ca/en/graduate-studies/fees-funding/scholarships-awards/engagement-scholarship.html">Graduate Student Engagement Scholarship (GSES)</a></span><br/>
+                <a href="https://www.ualberta.ca/en/graduate-studies/fees-funding/scholarships-awards/engagement-scholarship.html">University of Alberta</a><br/>
+                10,000 CAD<br/>
+                September 2023 – August 2024<br/>
+            </div>
+        </div>
+
+        <div class="publication row clearfix">
+            <div class="row-media-small" style="background-image: url(fig/uofa.png);"></div>
+            <div class="row-text">
+                <span class="bold"><a href="https://www.ualberta.ca/en/graduate-studies/fees-funding/scholarships-awards/engagement-scholarship.html">Graduate Student Engagement Scholarship (GSES)</a></span><br/>
+                <a href="https://www.ualberta.ca/en/graduate-studies/fees-funding/scholarships-awards/engagement-scholarship.html">University of Alberta</a><br/>
+                10,000 CAD<br/>
+                September 2022 – August 2023<br/>
+            </div>
+        </div>
+
+        <div class="publication row clearfix">
+            <div class="row-media-small" style="background-image: url(fig/AIMS.png);"></div>
+            <div class="row-text">
+                <span class="bold">African Master in Machine Intelligence (<a href="https://aims-ammi.org/">AMMI</a>)</span><br/>
+                African Institute for Mathematical Sciences (<a href="https://aims.ac.rw/">AIMS</a>), Rwanda. 4% acceptance rate Africa-wide<br/>
+                15,000 USD<br/>
+                August 2018 – September 2019<br/>
+            </div>
+        </div>
+
+        <div class="publication row clearfix">
+            <div class="row-media-small" style="background-image: url(fig/uofk.png);"></div>
+            <div class="row-text">
+                <span class="bold">The Best Undergraduate Research Project</span><br/>
                 <a href="https://www.uofk.edu/index.php/en/">University of Khartoum</a><br/>
                 500 USD<br/>
                 October 2018<br/>
@@ -214,7 +232,7 @@
         <div class="publication row clearfix">
             <div class="row-media-small" style="background-image: url(fig/uofk.png);"></div>
             <div class="row-text">
-                <a class="bold">Undergraduate research prize, "Reinforcement Learning controller for Prosthetics"</a><br/>
+                <span class="bold">Undergraduate Research Prize, "Reinforcement Learning controller for Prosthetics"</span><br/>
                 <a href="https://www.uofk.edu/index.php/en/">University of Khartoum</a><br/>
                 2,000 USD<br/>
                 December 2017<br/>
@@ -224,11 +242,11 @@
         <div class="publication row clearfix">
             <iframe frameborder="0"
                 src="https://www.youtube.com/embed/ZpqypVq8Qgo"
-                style="float: left; width: 80px; height: 150px; background-position: center; background-size: contain; background-repeat: no-repeat;"> 
+                style="float: left; width: 80px; height: 150px; background-position: center; background-size: contain; background-repeat: no-repeat;">
             </iframe>
             <div class="row-text">
-                <a class="bold">Audiences Prize, "Wheelchair Robot controlled by Brain Signal"</a><br/>
-                <a href="https://apply.falling-walls.com/press-releases/falling-walls-lab-winners-2017/">Falling Walls Lab finals<br/> Berlin, Germany</a><br/>
+                <span class="bold">Audiences Prize, "Wheelchair Robot controlled by Brain Signal"</span><br/>
+                <a href="https://apply.falling-walls.com/press-releases/falling-walls-lab-winners-2017/">Falling Walls Lab finals, Berlin, Germany</a><br/>
                 1,000 USD<br/>
                 November 2017<br/>
             </div>
@@ -237,7 +255,7 @@
         <div class="publication row clearfix">
             <div class="row-media-small" style="background-image: url(fig/ericsson.png);"></div>
             <div class="row-text">
-                <a class="bold">Ericsson Scholarship</a><br/>
+                <span class="bold">Ericsson Scholarship</span><br/>
                 <a href="https://www.ericsson.com/en/about-us/corporate-governance/our-organization/mmea-lt-members-bios">ICT Professional Foundation Ericsson Middle East University Program</a><br/>
                 November 2016<br/>
             </div>
@@ -246,80 +264,104 @@
         <div class="publication row clearfix">
             <div class="row-media-small" style="background-image: url(fig/eeese.jpeg);"></div>
             <div class="row-text">
-                <a class="bold">Best Undergraduate project </a><br/>
+                <span class="bold">Best Undergraduate Project</span><br/>
                 <a href="https://www.linkedin.com/company/eeese/">Electrical and Electronics Engineering Students Exhibition (EEESE)</a><br/>
                 500 USD<br/>
-                May 2016 & May 2015<br/>
+                May 2016 &amp; May 2015<br/>
             </div>
         </div>
 
         <div class="publication row clearfix">
             <div class="row-media-small" style="background-image: url(fig/patent.jpg);"></div>
             <div class="row-text">
-                <a class="bold"> Patent #4245: Wheelchair Robot controlled by Brain signal</a><br/>
-                <a class="bold"> Patent #3334: Smart Farm</a><br/>
+                <span class="bold">Patent #4245: Wheelchair Robot controlled by Brain Signal</span><br/>
+                <span class="bold">Patent #3334: Smart Farm</span><br/>
                 <a href="https://www.linkedin.com/company/eeese/">Patent Office, Ministry of Justice, Sudan</a><br/>
-                May 2016 & May 2016<br/>
+                May 2016 &amp; May 2016<br/>
             </div>
         </div>
-
-
     </div>
 
-    <div>
-        <h1 class="noselect">Projects:</h1>
+    <!-- Projects -->
+    <div id="tab-projects" class="tab-panel">
+        <h2 class="tab-heading noselect">Projects</h2>
 
         <div class="publication row clearfix">
-            <div class="row-media" style="background-image: url(fig/bco.gif);"></div><div class="row-text">
-                <a class="bold">Implementation for Behavior Cloning (BC) and behavior cloning from observation (BCO)<a href="https://arxiv.org/abs/1805.01954"> algorithms in PyTorch</a></a><br/>
+            <div class="row-media" style="background-image: url(fig/bco.gif);"></div>
+            <div class="row-text">
+                <span class="bold">Implementation for Behavior Cloning (BC) and <a href="https://arxiv.org/abs/1805.01954">Behavior Cloning from Observation (BCO) algorithms in PyTorch</a></span><br/>
                 Imitation learning algorithms.<br/>
                 <a href="https://github.com/montaserFath/BCO">GitHub repo</a><br/>
             </div>
         </div>
 
         <div class="publication row clearfix">
-            <div class="row-media" style="background-image: url(fig/brain_control.gif);"></div><div class="row-text">
-                <a class="bold">Wheelchair robot Controlled by Brain Signal</a><br/>
-                Develope a wheelchair robot helps disabled people move using EEG signals from the brain.<br/>
+            <div class="row-media" style="background-image: url(fig/brain_control.gif);"></div>
+            <div class="row-text">
+                <span class="bold">Wheelchair Robot Controlled by Brain Signal</span><br/>
+                Develop a wheelchair robot that helps disabled people move using EEG signals from the brain.<br/>
                 <a href="https://github.com/montaserFath/Wheelchair-controlled-by-Brain-Signal">GitHub repo</a><br/>
             </div>
         </div>
 
         <div class="publication row clearfix">
-            <div class="row-media" style="background-image: url(fig/rl_leg.jpeg);"></div><div class="row-text">
-                <a class="bold">NeurIPS2018 Challenge: RL for Prosthetics</a><br/>
-                Build an RL Prosthetics controller, that learns to walk like humans, and uses Imitation Learning to accelerate learning.<br/>
-                <a href="https://github.com/montaserFath/Reinforcement-Learning-for-Prosthetics">GitHub repo</a><br/>
-            </div>
-        </div>
-        
-        <div class="publication row clearfix">
-            <div class="row-media" style="background-image: url(fig/mon_mdp.png);"></div><div class="row-text">
-                <a class="bold">Monitored Markov Decision Processes<a href="https://www.ifaamas.org/Proceedings/aamas2024/pdfs/p1549"></a></a><br/>
-                RL assumes that the reward is observable to the agent all the time, but is often not applicable in some real-world problems, Mon-MDPs present a new framework to
-                tackle that by discussing the theoretical and practical consequences of this setting<br/>
+            <div class="row-media" style="background-image: url(fig/rl_leg.jpeg);"></div>
+            <div class="row-text">
+                <span class="bold">NeurIPS 2018 Challenge: RL for Prosthetics</span><br/>
+                Build an RL Prosthetics controller that learns to walk like humans, and uses Imitation Learning to accelerate learning.<br/>
                 <a href="https://github.com/montaserFath/Reinforcement-Learning-for-Prosthetics">GitHub repo</a><br/>
             </div>
         </div>
 
         <div class="publication row clearfix">
-            <div class="row-media" style="background-image: url(fig/LBC.png);"></div><div class="row-text">
-                <a class="bold">Learning to be Cautious<a href="https://arxiv.org/abs/2110.15907"></a></a><br/>
-                An algorithm that automatically behaves cautiously and safely in novel circumstances, without prior knowledge or human supervision<br/>
+            <div class="row-media" style="background-image: url(fig/mon_mdp.png);"></div>
+            <div class="row-text">
+                <span class="bold">Monitored Markov Decision Processes</span><br/>
+                RL assumes that the reward is observable to the agent all the time, but is often not applicable in some real-world problems. Mon-MDPs present a new framework to
+                tackle that by discussing the theoretical and practical consequences of this setting.<br/>
+                <a href="https://github.com/montaserFath/MonMDP">GitHub repo</a><br/>
+            </div>
+        </div>
+
+        <div class="publication row clearfix">
+            <div class="row-media" style="background-image: url(fig/LBC.png);"></div>
+            <div class="row-text">
+                <span class="bold">Learning to Be Cautious</span><br/>
+                An algorithm that automatically behaves cautiously and safely in novel circumstances, without prior knowledge or human supervision.<br/>
                 <a href="https://github.com/montaserFath/Learning-to-be-Cautious">GitHub repo</a><br/>
             </div>
         </div>
 
         <div class="publication row clearfix">
-            <div class="row-media" style="background-image: url(fig/ddpg.gif);"></div><div class="row-text">
-                <a class="bold">Benchmark ChainerRL library<a href="https://github.com/chainer/chainerrl"> in OpenAI Gym Environments</a></a><br/>
-                Benchmarking RL algorithms: Deterministic Policy Gradient<a href="https://arxiv.org/abs/1509.02971"> (DDPG)</a>, Trust Region Policy Optimization
-                <a href="http://proceedings.mlr.press/v37/schulman15.pdf"> (TRPO) </a> and Proximal Policy Optimization
-                <a href="https://arxiv.org/abs/1707.06347"> (PPO)</a> algorithms.<br/>
+            <div class="row-media" style="background-image: url(fig/ddpg.gif);"></div>
+            <div class="row-text">
+                <span class="bold">Benchmark <a href="https://github.com/chainer/chainerrl">ChainerRL library in OpenAI Gym Environments</a></span><br/>
+                Benchmarking RL algorithms: Deterministic Policy Gradient <a href="https://arxiv.org/abs/1509.02971">(DDPG)</a>, Trust Region Policy Optimization
+                <a href="http://proceedings.mlr.press/v37/schulman15.pdf">(TRPO)</a> and Proximal Policy Optimization
+                <a href="https://arxiv.org/abs/1707.06347">(PPO)</a> algorithms.<br/>
                 <a href="https://github.com/montaserFath/Benchmark-ChainerRL-library-in-Gym-Environments">GitHub repo</a><br/>
             </div>
         </div>
-
-
     </div>
+
 </div>
+
+<script>
+    const tabs = document.querySelectorAll('.tab-btn');
+    const panels = document.querySelectorAll('.tab-panel');
+
+    function activateTab(id) {
+        tabs.forEach(t => t.classList.toggle('active', t.dataset.tab === id));
+        panels.forEach(p => p.classList.toggle('active', p.id === 'tab-' + id));
+        history.replaceState(null, '', '#' + id);
+    }
+
+    tabs.forEach(btn => btn.addEventListener('click', () => activateTab(btn.dataset.tab)));
+
+    // Restore tab from URL hash on load
+    const hash = location.hash.replace('#', '');
+    if (hash && document.getElementById('tab-' + hash)) activateTab(hash);
+</script>
+
+</body>
+</html>
