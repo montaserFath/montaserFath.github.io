@@ -11,7 +11,7 @@ h1, h2, h3, h4, h5, a, p, span, body, div {font-weight: normal; font-family: 'La
 .header-profile-picture, .header-text {display: inline-block;}
 .header-name h1 {margin: 0;}
 .header-subtitle {margin-bottom: 12px;}
-.header-profile-picture {width: 100px; height: 100px; margin-right: 12px; border-radius: 50%; background-image: url(files/me.png); background-position: center; background-size: contain; background-repeat: no-repeat;}
+.header-profile-picture {width: 100px; height: 100px; margin-right: 12px; border-radius: 50%; background-image: url(fig/id.png); background-position: center; background-size: contain; background-repeat: no-repeat;}
 .content {max-width: 780px; padding-left: 16px; padding-right: 16px; margin: auto;}
 
 /* ── Tab bar ── */
@@ -54,6 +54,14 @@ p {line-height: 1.5em;}
 .footer-content a {color: #fff; text-decoration: underline;}
 .footer-content a:hover {color: #f09228 !important;}
 .stars {font-size: 10px; display: inline-block; margin-left: 6px; color: #666;}
+
+/* ── Updates timeline ── */
+.updates-list {list-style: none; padding: 0; margin: 0;}
+.update-item {display: flex; gap: 20px; padding: 14px 0; border-bottom: 1px solid #edf0f3; align-items: baseline;}
+.update-item:last-child {border-bottom: none;}
+.update-date {flex-shrink: 0; width: 72px; font-size: 0.85em; color: #888; font-variant-numeric: tabular-nums;}
+.update-text {line-height: 1.55em; color: #2c3c4c;}
+.update-text em {font-style: italic; color: #345;}
 
 /* ── Buttons ── */
 .btn {display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 0.88em; border: 1px solid #c8d8e8; margin: 2px 1px; color: #2471a3;}
