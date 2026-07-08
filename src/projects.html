@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Projects — Montaser Mohammedalamen</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<div class="header noselect">
+    <div class="content row">
+        <div class="header-profile-picture"></div>
+        <div class="header-text">
+            <div class="header-name">
+                <h1>Montaser Mohammedalamen, PhD</h1>
+            </div>
+            <div class="header-subtitle">
+                Applied Research Scientist, <a href="https://www.amii.ca/people/montaser-mohammedalamen">Alberta Machine Intelligence Institute (Amii)</a>
+            </div>
+            <div class="header-links">
+                <a class="btn" href="mailto:mohmmeda@ualberta.ca"><span class="bold">Email: mohmmeda</span> [at] <span class="bold">ualberta</span>.ca</a> |
+                <a class="btn" href="https://scholar.google.ca/citations?user=ZY882-kAAAAJ&hl">Google Scholar</a> |
+                <a class="btn" href="https://github.com/montaserFath/">GitHub</a> |
+                <a class="btn" href="https://www.linkedin.com/in/montaser-mohammedalamen/">LinkedIn</a> |
+                <a class="btn" href="../content/Montaser_CV.pdf">CV</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="tabs-bar">
+    <div class="tabs-inner">
+        <a class="tab-btn" href="../index.html">About</a>
+        <a class="tab-btn" href="../index.html#experience">Work Experience</a>
+        <a class="tab-btn" href="publications.html">Publications</a>
+        <a class="tab-btn" href="education.html">Education</a>
+        <a class="tab-btn" href="awards.html">Scholarships &amp; Awards</a>
+        <a class="tab-btn active" href="projects.html">Projects</a>
+        <a class="tab-btn" href="../index.html#service">Professional Service</a>
+        <a class="tab-btn" href="talks.html">Talks &amp; Media</a>
+        <a class="tab-btn" href="../index.html#volunteering">Volunteering</a>
+    </div>
+</div>
+
+<div class="content" style="padding-bottom: 64px;">
+    <h2 class="tab-heading noselect">Projects</h2>
+
+    <h3 class="pub-section-heading">Ongoing</h3>
+
+    <div class="publication row clearfix">
+        <div class="row-text" style="max-width: 100%; margin-left: 0;">
+            <span class="bold">RL for LLMs Risk Assessment</span> &nbsp;<span class="proj-tag">Generative Models Safety</span><br/>
+            <ul class="exp-list">
+                <li>Tech Lead, developing a three-stage optimization framework that reframes generative model jailbreaking as a sequential decision problem. The system structurally decomposes environmental and algorithmic components to isolate the core drivers of adversarial success, scales exploitation pipelines across multi-modal action spaces (text, vision, and audio), and embeds these insights into a unified two-player zero-sum game.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="publication row clearfix">
+        <div class="row-text" style="max-width: 100%; margin-left: 0;">
+            <span class="bold">Learning to Be Cautious for Industrial Chemical Control</span> &nbsp;<span class="proj-tag">Critical Applications Safety</span><br/>
+            <ul class="exp-list">
+                <li>Generalized the "learning to be cautious" framework to continuous action spaces, extending its mathematical applicability to high-dimensional, safety-critical settings. Validated on complex chemical process control benchmarks, bridging the gap between theoretical safe RL and real-world industrial deployments.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="publication row clearfix">
+        <div class="row-text" style="max-width: 100%; margin-left: 0;">
+            <span class="bold">Plasticity Loss in Monitored MDPs</span> &nbsp;<span class="proj-tag">Continual RL</span><br/>
+            <ul class="exp-list">
+                <li>Investigating structural mechanisms of plasticity loss within Mon-MDPs to preserve agent adaptability during continual learning. Analyzing how the dual-learning architecture compounds long-term performance degradation, and formulating a systematic framework to evaluate intrinsic vulnerabilities while adapting regularization and reset mitigation strategies.</li>
+            </ul>
+        </div>
+    </div>
+
+    <h3 class="pub-section-heading">Previous</h3>
+
+    <div class="publication row clearfix">
+        <div class="row-media" style="background-image: url(../fig/mon_mdp.png);"></div>
+        <div class="row-text">
+            <span class="bold">Monitored Markov Decision Processes</span> &nbsp;<span class="proj-tag">Theoretical &amp; Practical Evaluation</span><br/>
+            Addressed settings where reward structures are unobservable to the agent, analyzing consequences across varied testing scenarios.<br/>
+            <a class="btn btn-red" href="https://arxiv.org/abs/2505.08988">arXiv</a> | <a class="btn" href="https://github.com/montaserFath/MonMDP">code</a>
+        </div>
+    </div>
+
+    <div class="publication row clearfix">
+        <div class="row-media" style="background-image: url(../fig/LBC.png);"></div>
+        <div class="row-text">
+            <span class="bold">Learning to Be Cautious</span> &nbsp;<span class="proj-tag">Robust Optimization</span><br/>
+            Agents trained with standard RL can behave catastrophically in novel or out-of-distribution states. This project introduces a minimax regret framework that makes agents learn to be cautious, preferring conservative actions when epistemic uncertainty is high, without human supervision or prior knowledge of the failure modes. Published in TMLR 2025.<br/>
+            <a class="btn" href="https://github.com/montaserFath/Learning-to-be-Cautious">code</a>
+        </div>
+    </div>
+
+    <div class="publication row clearfix">
+        <div class="row-media" style="background-image: url(../fig/bco.gif);"></div>
+        <div class="row-text">
+            <span class="bold">Behavior Cloning (BC) and <a href="https://arxiv.org/abs/1805.01954">BCO</a> in PyTorch</span><br/>
+            Imitation learning algorithm implementations.<br/>
+            <a class="btn" href="https://github.com/montaserFath/BCO">code</a>
+        </div>
+    </div>
+
+    <div class="publication row clearfix">
+        <div class="row-media" style="background-image: url(../fig/brain_control.gif);"></div>
+        <div class="row-text">
+            <span class="bold">Wheelchair Robot Controlled by Brain Signal</span><br/>
+            A wheelchair robot that helps disabled people move using EEG signals from the brain.<br/>
+            <a class="btn" href="https://github.com/montaserFath/Wheelchair-controlled-by-Brain-Signal">code</a>
+        </div>
+    </div>
+
+    <div class="publication row clearfix">
+        <div class="row-media" style="background-image: url(../fig/rl_leg.jpeg);"></div>
+        <div class="row-text">
+            <span class="bold">NeurIPS 2018 Challenge: RL for Prosthetics</span><br/>
+            RL Prosthetics controller that learns to walk like humans, accelerated with Imitation Learning.<br/>
+            <a class="btn" href="https://github.com/montaserFath/Reinforcement-Learning-for-Prosthetics">code</a>
+        </div>
+    </div>
+
+    <!-- <div class="publication row clearfix">
+        <div class="row-media" style="background-image: url(../fig/ddpg.gif);"></div>
+        <div class="row-text">
+            <span class="bold">Benchmark <a href="https://github.com/chainer/chainerrl">ChainerRL</a> in OpenAI Gym</span><br/>
+            Benchmarking DDPG, TRPO, and PPO algorithms across standard continuous-control environments.<br/>
+            <a class="btn" href="https://github.com/montaserFath/Benchmark-ChainerRL-library-in-Gym-Environments">code</a>
+        </div>
+    </div> -->
+</div>
+
+<div class="footer">
+    <div class="footer-content">
+        Last updated: July 2026
+    </div>
+</div>
+
+</body>
+</html>
