@@ -94,6 +94,10 @@ p {line-height: 1.6em; margin: 0 0 16px;}
 .btn-dark {background: #f2f4f6; border-color: #c8d0d8; color: #456;}
 .btn-dark:hover {color: #f09228; border-color: #f09228;}
 
+/* ── Talk thumbnails ── */
+.talk-thumb {display: block; float: left; width: 150px; height: 85px; object-fit: cover; border-radius: 4px; border: 1px solid #e0e6ed; flex-shrink: 0;}
+.talk-thumb:hover {opacity: 0.85;}
+
 /* ── Tablet (≤ 768px) ── */
 @media (max-width: 768px) {
     body {font-size: 15px;}
@@ -106,6 +110,7 @@ p {line-height: 1.6em; margin: 0 0 16px;}
     .row-media {float: none; display: block; width: 100%; max-width: 280px; height: 140px; margin: 0 auto 12px;}
     .row-media-small {float: none; display: block; width: 64px; height: 32px; margin: 0 0 8px;}
     .row-text {display: block; margin-left: 0; width: 100%;}
+    .talk-thumb {float: none; display: block; width: 100%; max-width: 280px; height: 158px; margin: 0 auto 12px;}
     .update-date {width: 58px;}
 }
 
