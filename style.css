@@ -135,6 +135,16 @@ p {line-height: 1.6em; margin: 0 0 16px;}
     .update-date {width: 58px;}
 }
 
+/* ── Contact ── */
+.contact-block {margin: 20px 0 8px; border: 1px solid #e8ecf0; border-radius: 8px; overflow: hidden;}
+.contact-row {display: flex; align-items: baseline; gap: 16px; padding: 11px 18px; border-bottom: 1px solid #e8ecf0;}
+.contact-row:last-child {border-bottom: none;}
+.contact-row:nth-child(odd) {background: #f8f9fb;}
+.contact-label {flex-shrink: 0; width: 120px; font-weight: bold; font-size: 0.88em; color: #445; text-transform: uppercase; letter-spacing: 0.03em;}
+.contact-value {color: #334; font-size: 0.95em;}
+.contact-value a {color: #2471a3;}
+.contact-value a:hover {color: #f09228;}
+
 /* ── Mobile (≤ 480px) ── */
 @media (max-width: 480px) {
     body {font-size: 14px;}
