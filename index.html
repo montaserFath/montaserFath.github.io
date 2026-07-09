@@ -16,7 +16,7 @@
 
 <!-- ── Header ── -->
 <div class="header noselect">
-    <div class="content row">
+    <div class="header-inner">
         <div class="header-profile-picture"></div>
         <div class="header-text">
             <div class="header-name">
@@ -36,290 +36,453 @@
     </div>
 </div>
 
-<!-- ── Tab bar ── -->
-<div class="tabs-bar">
-    <div class="tabs-inner">
+<!-- ── Mobile menu toggle ── -->
+<button class="mobile-menu-btn" id="menuToggle" aria-label="Toggle navigation">☰ Menu</button>
+
+<!-- ── Body layout ── -->
+<div class="site-body">
+
+    <!-- Sidebar -->
+    <nav class="sidebar" id="sidebar">
         <button class="tab-btn active" data-tab="about">About</button>
         <button class="tab-btn" data-tab="experience">Work Experience</button>
-        <a class="tab-btn" href="src/publications.html">Publications</a>
-        <a class="tab-btn" href="src/education.html">Education</a>
-        <a class="tab-btn" href="src/awards.html">Scholarships &amp; Awards</a>
-        <a class="tab-btn" href="src/projects.html">Projects</a>
+        <button class="tab-btn" data-tab="publications">Publications</button>
+        <button class="tab-btn" data-tab="education">Education</button>
+        <button class="tab-btn" data-tab="awards">Scholarships &amp; Awards</button>
+        <button class="tab-btn" data-tab="projects">Projects</button>
         <button class="tab-btn" data-tab="service">Professional Service</button>
-        <a class="tab-btn" href="src/talks.html">Talks &amp; Media</a>
+        <button class="tab-btn" data-tab="talks">Talks &amp; Media</button>
         <button class="tab-btn" data-tab="volunteering">Volunteering</button>
-    </div>
+        <button class="tab-btn" data-tab="certifications">Certifications</button>
+    </nav>
+
+    <!-- Main content -->
+    <main class="main-content">
+
+        <!-- ── About ── -->
+        <div id="tab-about" class="tab-panel active">
+            <h2 class="tab-heading noselect">Bio</h2>
+            <p>
+                I am an Applied Research Scientist in AI Trust &amp; Safety at the <a href="https://www.amii.ca/people/montaser-mohammedalamen">Alberta Machine Intelligence Institute (Amii)</a>,
+                where I lead research at the intersection of reinforcement learning and AI safety. My work spans two complementary tracks: using RL as a diagnostic and offensive tool to
+                systematically audit and defend frontier large language models against adversarial jailbreaking, and addressing foundational failure modes within RL agents themselves —
+                including epistemic uncertainty, partial reward observability, non-stationarity, and continual learning constraints.
+            </p>
+            <p>
+                I completed my PhD in Computing Science at the <a href="https://www.ualberta.ca/computing-science/index.html">University of Alberta</a>, advised by
+                Prof. <a href="https://webdocs.cs.ualberta.ca/~bowling/">Michael Bowling</a>, where my dissertation introduced the <em>Monitored MDP</em> framework — a principled treatment
+                of reinforcement learning under partially observable reward signals — along with algorithms for cautious, robust decision-making in novel and out-of-distribution environments.
+            </p>
+            <p>
+                Prior to academia, I spent three years as an AI Engineer at <a href="https://ai.sony/">SonyAI</a> in Tokyo, contributing to the ACE table-tennis robot project — a system
+                that achieved professional-level play and resulted in a <a href="https://www.nature.com/articles/s41586-026-10338-5"><em>Nature</em></a> publication. My work there spanned multi-agent
+                simulation, sim-to-real transfer, and real-time robot control integration.
+            </p>
+            <p>
+                My research has been published in TMLR, AAMAS, and RLC, and I collaborate closely with the Canadian AI Safety Institute (CAISI), the Canadian Institute for Advanced Research (CIFAR), and the National Research Council of Canada (NRC).
+            </p>
+            <h2 class="tab-heading noselect" style="margin-top: 36px;">Research Vision</h2>
+            <p>
+                Looking ahead, my research agenda centers on building agents that continuously learn and adapt from real-world experience, moving beyond the idealized assumptions of traditional MDP formulations that rarely hold outside labs and simulations.
+                I am particularly interested in settings where partial reward observability and non-stationarity are the rule rather than the exception, and in developing the principled foundations that let agents navigate these conditions reliably.
+                Across all of this, I hold as a core constraint that deployed agents must remain safe — not just in the moment, but throughout their operational lifetime — to themselves, to the humans who depend on them, and to the broader environment they inhabit.
+            </p>
+            <h2 class="tab-heading noselect" style="margin-top: 36px;">Updates</h2>
+            <ul class="updates-list">
+                <li class="update-item"><span class="update-date">Jul 2026</span><span class="update-text">Two workshop papers accepted at the <em>Agents in the Wild: Safety, Security, and Beyond Workshop</em>, ICML 2026: <a href="https://arxiv.org/abs/2605.07032">"A Systematic Investigation of The RL-Jailbreaker in LLMs"</a> and <a href="https://openreview.net/challenge?redirect=%2Fforum%3Fid%3Dwvga9chmb6">"AI Agent Safety is a Reinforcement Learning Problem."</a></span></li>
+                <li class="update-item"><span class="update-date">Jul 2026</span><span class="update-text">Paper <a href="https://arxiv.org/abs/2505.08988"><em>Generalization in Monitored Markov Decision Processes (Mon-MDPs)</em></a> accepted at the <em>Reinforcement Learning Conference (RLC) 2026</em>, Montreal, Canada.</span></li>
+                <li class="update-item"><span class="update-date">Apr 2026</span><span class="update-text">Contributed to the ACE table-tennis robot project at SonyAI, which resulted in a <a href="https://www.nature.com/articles/s41586-026-10338-5"><em>Nature</em></a> publication on a system capable of defeating professional players.</span></li>
+                <li class="update-item"><span class="update-date">Dec 2025</span><span class="update-text">Completed PhD in Computing Science at the <a href="https://www.ualberta.ca/computing-science/index.html">University of Alberta</a>. Thesis: <a href="https://ualberta.scholaris.ca/items/5c60dc71-7149-4a39-a40f-7d96e44f2379"><em>Reinforcement Learning with Partially Observable Rewards</em></a>.</span></li>
+                <li class="update-item"><span class="update-date">Oct 2025</span><span class="update-text">Paper <a href="https://openreview.net/forum?id=NXvGOaYExG"><em>Learning to Be Cautious</em></a> published in <em>Transactions on Machine Learning Research (TMLR)</em>.</span></li>
+                <li class="update-item"><span class="update-date">Jul 2025</span><span class="update-text">Joined the <a href="https://www.amii.ca/people/montaser-mohammedalamen">Alberta Machine Intelligence Institute (Amii)</a> as an Applied Research Scientist in AI Trust &amp; Safety.</span></li>
+                <li class="update-item"><span class="update-date">May 2025</span><span class="update-text">Received the <em>Andrew Stewart Memorial Graduate Prize</em> from the University of Alberta (5,000 CAD).</span></li>
+                <li class="update-item"><span class="update-date">May 2024</span><span class="update-text">Presented <a href="https://dl.acm.org/doi/abs/10.5555/3635637.3663015"><em>Monitored Markov Decision Processes</em></a> at <em>AAMAS 2024</em>, Auckland, New Zealand.</span></li>
+                <li class="update-item"><span class="update-date">Jan 2024</span><span class="update-text">Received the <a href="https://www.ualberta.ca/en/graduate-studies/fees-funding/scholarships-awards/engagement-scholarship.html">Graduate Student Engagement Scholarship (GSES)</a> from the University of Alberta (10,000 CAD).</span></li>
+                <li class="update-item"><span class="update-date">Jan 2023</span><span class="update-text">Received the <a href="https://www.ualberta.ca/en/graduate-studies/fees-funding/scholarships-awards/engagement-scholarship.html">Graduate Student Engagement Scholarship (GSES)</a> from the University of Alberta (10,000 CAD).</span></li>
+                <li class="update-item"><span class="update-date">Jan 2022</span><span class="update-text">Started PhD at the <a href="https://www.ualberta.ca/computing-science/index.html">Computing Science Department, University of Alberta</a>, advised by Prof. <a href="https://webdocs.cs.ualberta.ca/~bowling/">Michael Bowling</a>.</span></li>
+                <li class="update-item"><span class="update-date">Jun 2020</span><span class="update-text">Joined <a href="https://ai.sony/">SonyAI</a> as an AI Engineer in Tokyo, Japan.</span></li>
+            </ul>
+        </div>
+
+        <!-- ── Work Experience ── -->
+        <div id="tab-experience" class="tab-panel">
+            <h2 class="tab-heading noselect">Work Experience</h2>
+            <div class="publication row clearfix">
+                <div class="row-media-small" style="background-image: url(fig/amii.jpeg);"></div>
+                <div class="row-text">
+                    <span class="bold">Applied Research Scientist, AI Trust &amp; Safety — <a href="https://www.amii.ca/people/montaser-mohammedalamen">Alberta Machine Intelligence Institute (Amii)</a></span><br/>
+                    Edmonton, Canada &nbsp;·&nbsp; July 2025 – Present<br/>
+                    <ul class="exp-list">
+                        <li><span class="bold">Research Strategy:</span> Establishing Amii's safety research dual-track strategy using RL for risk assignment in generative models, and mitigating structural RL safety (uncertainty, non-stationarity, partial reward observability).</li>
+                        <li><span class="bold">Technical Collaboration:</span> Partnering with Cohere and national institutes — Canadian AI Safety Institute (CAISI), CIFAR Medical AI Working Group, Mila, the Vector Institute, and the National Research Council (NRC).</li>
+                        <li><span class="bold">Academic Outreach:</span> Directed a 10-session technical AI safety track for Amii's annual Upper Bound conference, serving an audience of over 11,000 attendees.</li>
+                        <li><span class="bold">Team Building:</span> Hired a Research Scientist and an ML Engineer while overhauling the technical interviews framework now adopted by Amii.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="publication row clearfix">
+                <div class="row-media-small" style="background-image: url(fig/sonyai.png);"></div>
+                <div class="row-text">
+                    <span class="bold">AI Engineer — <a href="https://ai.sony/">SonyAI</a></span><br/>
+                    Tokyo, Japan &nbsp;·&nbsp; June 2020 – Oct 2020 &amp; Jan 2021 – Oct 2022<br/>
+                    <ul class="exp-list">
+                        <li><span class="bold">Robotics Research:</span> Contributed to the ACE table-tennis robot team capable of defeating professional players, resulting in a <a href="https://www.nature.com/articles/s41586-026-10338-5">Nature</a> publication.</li>
+                        <li><span class="bold">RL Policy:</span> Trained RL policies for targeted, high-precision ball returns and led the technical sub-team for robot serving.</li>
+                        <li><span class="bold">Sim-to-Real &amp; System Integration:</span> Built multi-agent simulation environments using self-play and goal-conditioned RL, successfully transferring trained policies onto real-time robot control loops.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="publication row clearfix">
+                <div class="row-media-small" style="background-image: url(fig/uofa.png);"></div>
+                <div class="row-text">
+                    <span class="bold">Research Associate — <a href="https://www.ualberta.ca/computing-science/index.html">University of Alberta</a></span><br/>
+                    Edmonton, Canada &nbsp;·&nbsp; February 2020 – December 2020<br/>
+                    <ul class="exp-list">
+                        <li>Formulated a novel robust optimization framework enabling autonomous agents to learn cautious behaviors in novel, out-of-distribution states, supervised by Prof. <a href="https://webdocs.cs.ualberta.ca/~bowling/">Michael Bowling</a>.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="publication row clearfix">
+                <div class="row-media-small" style="background-image: url(fig/sony.png);"></div>
+                <div class="row-text">
+                    <span class="bold">Machine Learning Intern — <a href="https://ai.sony/">SonyAI</a></span><br/>
+                    Tokyo, Japan &nbsp;·&nbsp; July 2019 – January 2020<br/>
+                    <ul class="exp-list">
+                        <li>Designed an RL environment and trained policies using imitation learning to acquire complex cooking skills from chef demonstrations, successfully deploying the models on physical robots.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- ── Publications ── -->
+        <div id="tab-publications" class="tab-panel">
+            <h2 class="tab-heading noselect">Publications</h2>
+            <h3 class="pub-section-heading">Peer-Reviewed Journal Articles</h3>
+            <ol class="pub-list">
+                <li>
+                    <span class="bold">Montaser Mohammedalamen</span>, Dustin Morrill, Alexander Sieusahai, Yash Satsangi, and Michael Bowling,
+                    <a class="bold" href="https://openreview.net/forum?id=NXvGOaYExG">"Learning to Be Cautious,"</a>
+                    <span class="italic">Transactions on Machine Learning Research (TMLR)</span>, 2025.
+                    <br/><a class="btn btn-red" href="https://openreview.net/forum?id=NXvGOaYExG">paper</a> | <a class="btn" href="https://github.com/montaserFath/Learning-to-be-Cautious">code</a> | <a class="btn btn-dark" href="content/LBC.bib">bibtex</a> | <a class="btn btn-dark" href="https://youtu.be/t-pxmpCYHtA?si=qGmhcsEXPmPQQ07m">talk</a>
+                </li>
+            </ol>
+            <h3 class="pub-section-heading">Refereed Conference Publications</h3>
+            <ol class="pub-list">
+                <li>
+                    <span class="bold">Montaser Mohammedalamen</span> and Michael Bowling,
+                    <a class="bold" href="https://arxiv.org/abs/2505.08988">"Generalization in Monitored Markov Decision Processes (Mon-MDPs),"</a>
+                    <span class="italic">Reinforcement Learning Conference (RLC)</span>, Montreal, Canada, 2026.
+                    <br/><a class="btn btn-red" href="https://arxiv.org/abs/2505.08988">arXiv</a> | <a class="btn" href="https://github.com/montaserFath/MonMDP">code</a> | <a class="btn btn-dark" href="content/mon_mdp.bib">bibtex</a> | <a class="btn btn-dark" href="https://www.youtube.com/watch?v=7uLf88ROziw">talk</a>
+                </li>
+                <li>
+                    Simone Parisi, <span class="bold">Montaser Mohammedalamen</span>, Alireza Kazemipour, Matthew E. Taylor, and Michael Bowling,
+                    <a class="bold" href="https://dl.acm.org/doi/abs/10.5555/3635637.3663015">"Monitored Markov Decision Processes,"</a>
+                    <span class="italic">International Conference on Autonomous Agents and Multiagent Systems (AAMAS)</span>, Auckland, New Zealand, 2024.
+                    <br/><a class="btn btn-red" href="https://dl.acm.org/doi/abs/10.5555/3635637.3663015">paper</a> | <a class="btn" href="https://github.com/montaserFath/MonMDP">code</a> | <a class="btn btn-dark" href="content/mon_mdp.bib">bibtex</a> | <a class="btn btn-dark" href="https://youtu.be/3gM3b1uum9Y?si=Afbvr0NNyyIb1x1N">talk</a>
+                </li>
+            </ol>
+            <h3 class="pub-section-heading">Workshop Papers &amp; Preprints</h3>
+            <ol class="pub-list">
+                <li>
+                    <span class="bold">Montaser Mohammedalamen</span>, K. Roice, R. McLean, A. Lefaivre Škopac,
+                    <a class="bold" href="https://arxiv.org/abs/2605.07032">"A Systematic Investigation of The RL-Jailbreaker in LLMs,"</a>
+                    <span class="italic">Agents in the Wild: Safety, Security, and Beyond Workshop, ICML</span>, 2026.
+                    <br/><a class="btn btn-red" href="https://arxiv.org/abs/2605.07032">arXiv</a>
+                </li>
+                <li>
+                    R. McLean, T. E. Lee, <span class="bold">Montaser Mohammedalamen</span>, K. Roice, G. Berseth, P. M. Pilarski, M. C. Machado, A. Lefaivre Škopac, B. Rosman,
+                    <a class="bold" href="https://openreview.net/challenge?redirect=%2Fforum%3Fid%3Dwvga9chmb6">"AI Agent Safety is a Reinforcement Learning Problem,"</a>
+                    <span class="italic">Agents in the Wild: Safety, Security, and Beyond Workshop, ICML</span>, 2026.
+                    <br/><a class="btn btn-red" href="https://openreview.net/challenge?redirect=%2Fforum%3Fid%3Dwvga9chmb6">paper</a>
+                </li>
+                <li>
+                    <span class="bold">Montaser Mohammedalamen</span>, Michael Bowling, and Matthew E. Taylor,
+                    <span class="bold">"Learning To Be Cautious for Industrial Chemical Control,"</span>
+                    <span class="italic">Under review</span>.
+                </li>
+                <li>
+                    D. Khamies, <span class="bold">Montaser Mohammedalamen</span>, and B. Rosman,
+                    <a class="bold" href="https://arxiv.org/abs/1901.04772">"Transfer Learning for Prosthetics Using Imitation Learning,"</a>
+                    <span class="italic">Black in AI Workshop, NeurIPS</span>, 2018.
+                    <br/><a class="btn btn-red" href="https://arxiv.org/abs/1901.04772">arXiv</a> | <a class="btn" href="https://github.com/montaserFath/Reinforcement-Learning-for-Prosthetics">code</a> | <a class="btn btn-dark" href="content/transfer.bib">bibtex</a>
+                </li>
+            </ol>
+            <h3 class="pub-section-heading">Theses</h3>
+            <ol class="pub-list">
+                <li>
+                    <span class="bold">Montaser Mohammedalamen</span>,
+                    <a class="bold" href="https://ualberta.scholaris.ca/items/5c60dc71-7149-4a39-a40f-7d96e44f2379">"Reinforcement Learning with Partially Observable Rewards,"</a>
+                    PhD Thesis, University of Alberta, 2026.
+                    <br/><a class="btn btn-red" href="https://ualberta.scholaris.ca/items/5c60dc71-7149-4a39-a40f-7d96e44f2379">thesis</a>
+                </li>
+                <li>
+                    <span class="bold">Montaser Mohammedalamen</span>,
+                    <span class="bold">"Learning Actions Representation In Reinforcement Learning for Safe Exploration,"</span>
+                    Master's Thesis, 2019.
+                </li>
+            </ol>
+        </div>
+
+        <!-- ── Education ── -->
+        <div id="tab-education" class="tab-panel">
+            <h2 class="tab-heading noselect">Education</h2>
+            <div class="publication row clearfix">
+                <div class="row-media-small" style="background-image: url(fig/uofa.png);"></div>
+                <div class="row-text">
+                    <span class="bold">PhD in Computing Science — <a href="https://www.ualberta.ca/computing-science/index.html">University of Alberta</a></span><br/>
+                    Edmonton, Canada &nbsp;·&nbsp; Sep 2022 – Dec 2025<br/>
+                    <ul class="exp-list">
+                        <li><span class="bold">Thesis:</span> <a href="https://ualberta.scholaris.ca/items/5c60dc71-7149-4a39-a40f-7d96e44f2379">"Reinforcement Learning with Partially Observable Rewards"</a></li>
+                        <li><span class="bold">Advisor:</span> <a href="https://webdocs.cs.ualberta.ca/~bowling/">Prof. Michael Bowling</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="publication row clearfix">
+                <div class="row-media-small" style="background-image: url(fig/AIMS.png);"></div>
+                <div class="row-text">
+                    <span class="bold">M.Sc. in Machine Intelligence — <a href="https://aims.ac.rw/">African Institute for Mathematical Sciences</a></span><br/>
+                    Rwanda &nbsp;·&nbsp; Sep 2018 – Sep 2019<br/>
+                    <ul class="exp-list">
+                        <li><span class="bold">Performance:</span> Overall score 75%</li>
+                        <li><span class="bold">Advisor:</span> <a href="https://www.benjaminrosman.com/">Prof. Benjamin Rosman</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="publication row clearfix">
+                <div class="row-media-small" style="background-image: url(fig/uofk.png);"></div>
+                <div class="row-text">
+                    <span class="bold">B.Sc. (Honors) in Electronics &amp; Computer Engineering — <a href="https://www.uofk.edu/index.php/en/">University of Khartoum</a></span><br/>
+                    Sudan &nbsp;·&nbsp; Aug 2013 – Sep 2018<br/>
+                    <ul class="exp-list">
+                        <li><span class="bold">Performance:</span> First Class Honors (Ranked 3rd in the Electronics department, CGPA 7.5/10)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- ── Scholarships & Awards ── -->
+        <div id="tab-awards" class="tab-panel">
+            <h2 class="tab-heading noselect">Scholarships &amp; Awards</h2>
+            <div class="publication row clearfix">
+                <div class="row-media-small" style="background-image: url(fig/uofa.png);"></div>
+                <div class="row-text"><span class="bold">Andrew Stewart Memorial Graduate Prize</span><br/><a href="https://www.ualberta.ca/">University of Alberta</a><br/>5,000 CAD &nbsp;·&nbsp; May 2025</div>
+            </div>
+            <div class="publication row clearfix">
+                <div class="row-media-small" style="background-image: url(fig/uofa.png);"></div>
+                <div class="row-text"><span class="bold"><a href="https://www.ualberta.ca/en/graduate-studies/fees-funding/scholarships-awards/engagement-scholarship.html">Graduate Student Engagement Scholarship (GSES)</a></span><br/><a href="https://www.ualberta.ca/en/graduate-studies/fees-funding/scholarships-awards/engagement-scholarship.html">University of Alberta</a><br/>10,000 CAD &nbsp;·&nbsp; Jan 2024</div>
+            </div>
+            <div class="publication row clearfix">
+                <div class="row-media-small" style="background-image: url(fig/uofa.png);"></div>
+                <div class="row-text"><span class="bold"><a href="https://www.ualberta.ca/en/graduate-studies/fees-funding/scholarships-awards/engagement-scholarship.html">Graduate Student Engagement Scholarship (GSES)</a></span><br/><a href="https://www.ualberta.ca/en/graduate-studies/fees-funding/scholarships-awards/engagement-scholarship.html">University of Alberta</a><br/>10,000 CAD &nbsp;·&nbsp; Jan 2023</div>
+            </div>
+            <div class="publication row clearfix">
+                <div class="row-media-small" style="background-image: url(fig/AIMS.png);"></div>
+                <div class="row-text"><span class="bold">AMMI Master Scholarship</span><br/>African Master in Machine Intelligence (<a href="https://aims-ammi.org/">AMMI</a>), <a href="https://aims.ac.rw/">AIMS</a>, Rwanda<br/>15,000 USD &nbsp;·&nbsp; Sep 2019 &nbsp;·&nbsp; Top 4% acceptance continent-wide</div>
+            </div>
+            <div class="publication row clearfix">
+                <div class="row-media-small" style="background-image: url(fig/uofk.png);"></div>
+                <div class="row-text"><span class="bold">Best Graduation Project — "RL for Prosthetics"</span><br/><a href="https://www.uofk.edu/index.php/en/">University of Khartoum</a>, Sudan<br/>Oct 2018</div>
+            </div>
+            <div class="publication row clearfix">
+                <div class="row-media-small" style="background-image: url(fig/uofk.png);"></div>
+                <div class="row-text"><span class="bold">Undergraduate Research Prize</span><br/><a href="https://www.uofk.edu/index.php/en/">University of Khartoum</a><br/>2,000 USD &nbsp;·&nbsp; Dec 2017</div>
+            </div>
+            <div class="publication row clearfix">
+                <iframe frameborder="0" src="https://www.youtube.com/embed/ZpqypVq8Qgo" style="float: left; width: 80px; height: 150px;"></iframe>
+                <div class="row-text"><span class="bold">Audience Prize — "Wheelchair Robot controlled by Brain Signal"</span><br/><a href="https://apply.falling-walls.com/press-releases/falling-walls-lab-winners-2017/">Falling Walls Lab Finals</a>, Berlin, Germany<br/>Nov 2017</div>
+            </div>
+            <div class="publication row clearfix">
+                <div class="row-media-small" style="background-image: url(fig/ericsson.png);"></div>
+                <div class="row-text"><span class="bold">ICT Professional Foundation Scholarship</span><br/><a href="https://www.ericsson.com/en/about-us/corporate-governance/our-organization/mmea-lt-members-bios">Ericsson Middle East University Program</a><br/>Nov 2016</div>
+            </div>
+            <div class="publication row clearfix">
+                <div class="row-media-small" style="background-image: url(fig/eeese.jpeg);"></div>
+                <div class="row-text"><span class="bold">IEEE Extreme 10.0 Programming Competition</span><br/>IEEE Sudan Section<br/>Oct 2016 &nbsp;·&nbsp; Ranked 5th in Sudan, 988th of 2,500 teams globally</div>
+            </div>
+            <div class="publication row clearfix">
+                <div class="row-media-small" style="background-image: url(fig/eeese.jpeg);"></div>
+                <div class="row-text"><span class="bold">Best Project Award</span><br/><a href="https://www.linkedin.com/company/eeese/">Electrical &amp; Electronics Engineering Students Exhibition (EEESE)</a><br/>2015–2016 &nbsp;·&nbsp; Awarded consecutively for two years</div>
+            </div>
+        </div>
+
+        <!-- ── Projects ── -->
+        <div id="tab-projects" class="tab-panel">
+            <h2 class="tab-heading noselect">Projects</h2>
+            <h3 class="pub-section-heading">Ongoing</h3>
+            <div class="publication row clearfix">
+                <div class="row-text" style="max-width:100%; margin-left:0;">
+                    <span class="bold">RL for LLMs Risk Assessment</span> &nbsp;<span class="proj-tag">Generative Models Safety</span><br/>
+                    <ul class="exp-list"><li>Tech Lead, developing a three-stage optimization framework that reframes generative model jailbreaking as a sequential decision problem. The system structurally decomposes environmental and algorithmic components to isolate the core drivers of adversarial success, scales exploitation pipelines across multi-modal action spaces (text, vision, and audio), and embeds these insights into a unified two-player zero-sum game.</li></ul>
+                </div>
+            </div>
+            <div class="publication row clearfix">
+                <div class="row-text" style="max-width:100%; margin-left:0;">
+                    <span class="bold">Learning to Be Cautious for Industrial Chemical Control</span> &nbsp;<span class="proj-tag">Critical Applications Safety</span><br/>
+                    <ul class="exp-list"><li>Generalized the "learning to be cautious" framework to continuous action spaces, extending its mathematical applicability to high-dimensional, safety-critical settings. Validated on complex chemical process control benchmarks, bridging the gap between theoretical safe RL and real-world industrial deployments.</li></ul>
+                </div>
+            </div>
+            <div class="publication row clearfix">
+                <div class="row-text" style="max-width:100%; margin-left:0;">
+                    <span class="bold">Plasticity Loss in Monitored MDPs</span> &nbsp;<span class="proj-tag">Continual RL</span><br/>
+                    <ul class="exp-list"><li>Investigating structural mechanisms of plasticity loss within Mon-MDPs to preserve agent adaptability during continual learning. Analyzing how the dual-learning architecture compounds long-term performance degradation, and formulating a systematic framework to evaluate intrinsic vulnerabilities while adapting regularization and reset mitigation strategies.</li></ul>
+                </div>
+            </div>
+            <h3 class="pub-section-heading">Previous</h3>
+            <div class="publication row clearfix">
+                <div class="row-media" style="background-image: url(fig/mon_mdp.png);"></div>
+                <div class="row-text">
+                    <span class="bold">Monitored Markov Decision Processes</span> &nbsp;<span class="proj-tag">Theoretical &amp; Practical Evaluation</span><br/>
+                    Addressed settings where reward structures are unobservable to the agent, analyzing consequences across varied testing scenarios.<br/>
+                    <a class="btn btn-red" href="https://arxiv.org/abs/2505.08988">arXiv</a> | <a class="btn" href="https://github.com/montaserFath/MonMDP">code</a>
+                </div>
+            </div>
+            <div class="publication row clearfix">
+                <div class="row-media" style="background-image: url(fig/LBC.png);"></div>
+                <div class="row-text">
+                    <span class="bold">Learning to Be Cautious</span> &nbsp;<span class="proj-tag">Robust Optimization</span><br/>
+                    Minimax regret framework making agents learn conservative behavior in out-of-distribution states. Published in TMLR 2025.<br/>
+                    <a class="btn" href="https://github.com/montaserFath/Learning-to-be-Cautious">code</a>
+                </div>
+            </div>
+            <div class="publication row clearfix">
+                <div class="row-media" style="background-image: url(fig/bco.gif);"></div>
+                <div class="row-text">
+                    <span class="bold">Behavior Cloning (BC) and <a href="https://arxiv.org/abs/1805.01954">BCO</a> in PyTorch</span><br/>
+                    Imitation learning algorithm implementations.<br/>
+                    <a class="btn" href="https://github.com/montaserFath/BCO">code</a>
+                </div>
+            </div>
+            <div class="publication row clearfix">
+                <div class="row-media" style="background-image: url(fig/brain_control.gif);"></div>
+                <div class="row-text">
+                    <span class="bold">Wheelchair Robot Controlled by Brain Signal</span><br/>
+                    A wheelchair robot that helps disabled people move using EEG signals from the brain.<br/>
+                    <a class="btn" href="https://github.com/montaserFath/Wheelchair-controlled-by-Brain-Signal">code</a>
+                </div>
+            </div>
+            <div class="publication row clearfix">
+                <div class="row-media" style="background-image: url(fig/rl_leg.jpeg);"></div>
+                <div class="row-text">
+                    <span class="bold">NeurIPS 2018 Challenge: RL for Prosthetics</span><br/>
+                    RL Prosthetics controller that learns to walk like humans, accelerated with Imitation Learning.<br/>
+                    <a class="btn" href="https://github.com/montaserFath/Reinforcement-Learning-for-Prosthetics">code</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- ── Professional Service ── -->
+        <div id="tab-service" class="tab-panel">
+            <h2 class="tab-heading noselect">Professional Service</h2>
+            <h3 class="pub-section-heading">Reviewing</h3>
+            <div class="publication row clearfix"><div class="row-text" style="max-width:100%; margin-left:0;"><span class="bold">Transactions on Machine Learning Research (TMLR)</span> &nbsp;<span class="proj-tag">Journal Reviewer</span><br/>2024 – Present</div></div>
+            <div class="publication row clearfix"><div class="row-text" style="max-width:100%; margin-left:0;"><span class="bold">International Conference on Machine Learning (ICML)</span> &nbsp;<span class="proj-tag">Gold Reviewer</span><br/>2026</div></div>
+            <div class="publication row clearfix"><div class="row-text" style="max-width:100%; margin-left:0;"><span class="bold">Neural Information Processing Systems (NeurIPS)</span> &nbsp;<span class="proj-tag">Conference Reviewer</span><br/>2025 &amp; 2026</div></div>
+            <div class="publication row clearfix"><div class="row-text" style="max-width:100%; margin-left:0;"><span class="bold">Reinforcement Learning Conference (RLC)</span> &nbsp;<span class="proj-tag">Technical Reviewer</span><br/>2025 &amp; 2026</div></div>
+            <h3 class="pub-section-heading">Organization &amp; Committee</h3>
+            <div class="publication row clearfix"><div class="row-text" style="max-width:100%; margin-left:0;"><span class="bold">Adaptive and Learning Agents (ALA) Workshop at AAMAS</span> &nbsp;<span class="proj-tag">Workshop Co-organizer &amp; Area Chair</span><br/>2025 &amp; 2026</div></div>
+            <div class="publication row clearfix"><div class="row-text" style="max-width:100%; margin-left:0;"><span class="bold">Amii Fellows Trust &amp; Safety Research Proposals</span> &nbsp;<span class="proj-tag">Committee Member</span><br/>2026</div></div>
+            <div class="publication row clearfix"><div class="row-text" style="max-width:100%; margin-left:0;"><span class="bold">Cisco–University of Alberta Consortium for Agentic Research (CUACAR)</span> &nbsp;<span class="proj-tag">Research Proposal Reviewer</span><br/>2026</div></div>
+        </div>
+
+        <!-- ── Talks & Media ── -->
+        <div id="tab-talks" class="tab-panel">
+            <h2 class="tab-heading noselect">Talks &amp; Media</h2>
+            <h3 class="pub-section-heading">Talks</h3>
+            <div class="publication row clearfix">
+                <a href="https://www.youtube.com/watch?v=7uLf88ROziw" target="_blank" rel="noopener">
+                    <img class="row-media talk-thumb" src="https://img.youtube.com/vi/7uLf88ROziw/hqdefault.jpg" alt="Generalization in Mon-MDPs talk">
+                </a>
+                <div class="row-text">
+                    <span class="bold"><a href="https://www.youtube.com/watch?v=7uLf88ROziw" target="_blank">"Generalization in Monitored Markov Decision Processes (Mon-MDPs)"</a></span><br/>
+                    <span class="italic">Conference Talk — Reinforcement Learning Conference (RLC)</span><br/>
+                    Montreal, Canada &nbsp;·&nbsp; 2026<br/>
+                    <a class="btn btn-red" href="https://www.youtube.com/watch?v=7uLf88ROziw" target="_blank">watch</a>
+                    <a class="btn" href="https://arxiv.org/abs/2505.08988" target="_blank">paper</a>
+                    <a class="btn" href="https://github.com/montaserFath/MonMDP" target="_blank">code</a>
+                </div>
+            </div>
+            <div class="publication row clearfix">
+                <a href="https://youtu.be/t-pxmpCYHtA?si=qGmhcsEXPmPQQ07m" target="_blank" rel="noopener">
+                    <img class="row-media talk-thumb" src="https://img.youtube.com/vi/t-pxmpCYHtA/hqdefault.jpg" alt="Learning to Be Cautious talk">
+                </a>
+                <div class="row-text">
+                    <span class="bold"><a href="https://youtu.be/t-pxmpCYHtA?si=qGmhcsEXPmPQQ07m" target="_blank">"Learning to Be Cautious"</a></span><br/>
+                    <span class="italic">Paper Talk — Transactions on Machine Learning Research (TMLR)</span><br/>
+                    2025<br/>
+                    <a class="btn btn-red" href="https://youtu.be/t-pxmpCYHtA?si=qGmhcsEXPmPQQ07m" target="_blank">watch</a>
+                    <a class="btn" href="https://openreview.net/forum?id=NXvGOaYExG" target="_blank">paper</a>
+                </div>
+            </div>
+            <div class="publication row clearfix">
+                <a href="https://youtu.be/3gM3b1uum9Y?si=Afbvr0NNyyIb1x1N" target="_blank" rel="noopener">
+                    <img class="row-media talk-thumb" src="https://img.youtube.com/vi/3gM3b1uum9Y/hqdefault.jpg" alt="Monitored MDPs talk">
+                </a>
+                <div class="row-text">
+                    <span class="bold"><a href="https://youtu.be/3gM3b1uum9Y?si=Afbvr0NNyyIb1x1N" target="_blank">"Monitored Markov Decision Processes"</a></span><br/>
+                    <span class="italic">Conference Talk — AAMAS 2024</span><br/>
+                    Auckland, New Zealand &nbsp;·&nbsp; May 2024<br/>
+                    <a class="btn btn-red" href="https://youtu.be/3gM3b1uum9Y?si=Afbvr0NNyyIb1x1N" target="_blank">watch</a>
+                    <a class="btn" href="https://dl.acm.org/doi/abs/10.5555/3635637.3663015" target="_blank">paper</a>
+                </div>
+            </div>
+            <div class="publication row clearfix">
+                <a href="https://www.youtube.com/watch?v=ZpqypVq8Qgo" target="_blank" rel="noopener">
+                    <img class="row-media talk-thumb" src="https://img.youtube.com/vi/ZpqypVq8Qgo/hqdefault.jpg" alt="Falling Walls Lab talk">
+                </a>
+                <div class="row-text">
+                    <span class="bold"><a href="https://www.youtube.com/watch?v=ZpqypVq8Qgo" target="_blank">"Breaking the Wall of Inaccessibility: Wheelchair Robot Controlled by Brain Signal"</a></span><br/>
+                    <span class="italic"><a href="https://apply.falling-walls.com/press-releases/falling-walls-lab-winners-2017/">Falling Walls Lab Finals</a></span><br/>
+                    Berlin, Germany &nbsp;·&nbsp; Nov 2017 &nbsp;·&nbsp; <span class="bold">Audience Prize Winner</span><br/>
+                    <a class="btn btn-red" href="https://www.youtube.com/watch?v=ZpqypVq8Qgo" target="_blank">watch</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- ── Volunteering ── -->
+        <div id="tab-volunteering" class="tab-panel">
+            <h2 class="tab-heading noselect">Volunteering</h2>
+            <div class="publication row clearfix"><div class="row-text" style="max-width:100%; margin-left:0;"><span class="bold">Sudanese Machine Learning Community (SMLC)</span> &nbsp;<span class="proj-tag">Co-founder &amp; Core Representative</span><br/>Dec 2019 – Present<br/><ul class="exp-list"><li>Co-founded an initiative building AI capacity locally, connecting resources to regional engineering candidates.</li></ul></div></div>
+            <div class="publication row clearfix"><div class="row-text" style="max-width:100%; margin-left:0;"><span class="bold">SMLC Mentorship Program</span> &nbsp;<span class="proj-tag">Academic Research Mentor</span><br/>Dec 2019 – Present<br/><ul class="exp-list"><li>Mentoring undergraduate students at the University of Khartoum on custom baseline RL graduation projects.</li></ul></div></div>
+            <div class="publication row clearfix"><div class="row-text" style="max-width:100%; margin-left:0;"><span class="bold">EEESE Hackathon</span> &nbsp;<span class="proj-tag">Founder &amp; Event Coordinator</span><br/>Apr 2016 – Aug 2016<br/><ul class="exp-list"><li>Established the first hackathon event in Sudan, coordinating 28 student researchers from 7 distinct universities.</li></ul></div></div>
+            <div class="publication row clearfix"><div class="row-text" style="max-width:100%; margin-left:0;"><span class="bold">Academic Committee for EEESE</span> &nbsp;<span class="proj-tag">Head of Committee</span><br/>University of Khartoum &nbsp;·&nbsp; Aug 2015 – July 2016</div></div>
+        </div>
+
+        <!-- ── Certifications ── -->
+        <div id="tab-certifications" class="tab-panel">
+            <h2 class="tab-heading noselect">Certifications</h2>
+            <h3 class="pub-section-heading">Project Management</h3>
+            <div class="publication row clearfix"><div class="row-text" style="max-width:100%; margin-left:0;"><span class="bold">Professional Scrum Product Owner (PSPO)</span> &nbsp;<span class="proj-tag">Certified</span><br/><a href="https://www.scrum.org/professional-scrum-product-owner-certifications">Scrum.org</a></div></div>
+            <div class="publication row clearfix"><div class="row-text" style="max-width:100%; margin-left:0;"><span class="bold">Project Management Professional (PMP)</span> &nbsp;<span class="proj-tag">Exam Pending</span><br/><a href="https://www.pmi.org/certifications/project-management-pmp">Project Management Institute (PMI)</a> &nbsp;·&nbsp; Course completed; exam scheduled</div></div>
+        </div>
+
+    </main>
 </div>
 
-<!-- ── Tab panels ── -->
-<div class="content tab-content" style="padding-bottom: 64px;">
-
-    <!-- About -->
-    <div id="tab-about" class="tab-panel active">
-        <h2 class="tab-heading noselect">Bio</h2>
-        <p>
-            I am an Applied Research Scientist in AI Trust &amp; Safety at the <a href="https://www.amii.ca/people/montaser-mohammedalamen">Alberta Machine Intelligence Institute (Amii)</a>,
-            where I lead research at the intersection of reinforcement learning and AI safety. My work spans two complementary tracks: using RL as a diagnostic and offensive tool to
-            systematically audit and defend frontier large language models against adversarial jailbreaking, and addressing foundational failure modes within RL agents themselves —
-            including epistemic uncertainty, partial reward observability, non-stationarity, and continual learning constraints.
-        </p>
-        <p>
-            I completed my PhD in Computing Science at the <a href="https://www.ualberta.ca/computing-science/index.html">University of Alberta</a>, advised by
-            Prof. <a href="https://webdocs.cs.ualberta.ca/~bowling/">Michael Bowling</a>, where my dissertation introduced the <em>Monitored MDP</em> framework — a principled treatment
-            of reinforcement learning under partially observable reward signals — along with algorithms for cautious, robust decision-making in novel and out-of-distribution environments.
-        </p>
-        <p>
-            Prior to academia, I spent three years as an AI Engineer at <a href="https://ai.sony/">SonyAI</a> in Tokyo, contributing to the ACE table-tennis robot project — a system
-            that achieved professional-level play and resulted in a <a href="https://www.nature.com/articles/s41586-026-10338-5"><em>Nature</em></a> publication. My work there spanned multi-agent
-            simulation, sim-to-real transfer, and real-time robot control integration.
-        </p>
-        <p>
-            My research has been published in TMLR, AAMAS, and RLC, and I collaborate closely with the Canadian AI Safety Institute (CAISI), the Canadian Institute for Advanced Research (CIFAR), and the National Research Council of Canada (NRC).
-        </p>
-        <h2 class="tab-heading noselect" style="margin-top: 36px;">Research Vision</h2>
-        <p>
-            Looking ahead, my research agenda centers on building agents that continuously learn and adapt from real-world experience, moving beyond the idealized assumptions of traditional MDP formulations that rarely hold outside labs and simulations.
-            I am particularly interested in settings where partial reward observability and non-stationarity are the rule rather than the exception, and in developing the principled foundations that let agents navigate these conditions reliably.
-            Across all of this, I hold as a core constraint that deployed agents must remain safe — not just in the moment, but throughout their operational lifetime — to themselves, to the humans who depend on them, and to the broader environment they inhabit.
-        </p>
-
-        <h2 class="tab-heading noselect" style="margin-top: 36px;">Updates</h2>
-        <ul class="updates-list">
-            <li class="update-item">
-                <span class="update-date">Jul 2026</span>
-                <span class="update-text">Two workshop papers accepted at the <em>Agents in the Wild: Safety, Security, and Beyond Workshop</em>, ICML 2026: <a href="https://arxiv.org/abs/2605.07032">"A Systematic Investigation of The RL-Jailbreaker in LLMs"</a> and <a href="https://openreview.net/challenge?redirect=%2Fforum%3Fid%3Dwvga9chmb6">"AI Agent Safety is a Reinforcement Learning Problem."</a></span>
-            </li>
-            <li class="update-item">
-                <span class="update-date">Jul 2026</span>
-                <span class="update-text">Paper <a href="https://arxiv.org/abs/2505.08988"><em>Generalization in Monitored Markov Decision Processes (Mon-MDPs)</em></a> accepted at the <em>Reinforcement Learning Conference (RLC) 2026</em>, Montreal, Canada.</span>
-            </li>
-            <li class="update-item">
-                <span class="update-date">Apr 2026</span>
-                <span class="update-text">Contributed to the ACE table-tennis robot project at SonyAI, which resulted in a <a href="https://www.nature.com/articles/s41586-026-10338-5"><em>Nature</em></a> publication on a system capable of defeating professional players.</span>
-            </li>
-            <li class="update-item">
-                <span class="update-date">Dec 2025</span>
-                <span class="update-text">Completed PhD in Computing Science at the <a href="https://www.ualberta.ca/computing-science/index.html">University of Alberta</a>. Thesis: <a href="https://ualberta.scholaris.ca/items/5c60dc71-7149-4a39-a40f-7d96e44f2379"><em>Reinforcement Learning with Partially Observable Rewards</em></a>.</span>
-            </li>
-            <li class="update-item">
-                <span class="update-date">Oct 2025</span>
-                <span class="update-text">Paper <a href="https://openreview.net/forum?id=NXvGOaYExG"><em>Learning to Be Cautious</em></a> published in <em>Transactions on Machine Learning Research (TMLR)</em>.</span>
-            </li>
-            <li class="update-item">
-                <span class="update-date">Jul 2025</span>
-                <span class="update-text">Joined the <a href="https://www.amii.ca/people/montaser-mohammedalamen">Alberta Machine Intelligence Institute (Amii)</a> as an Applied Research Scientist in AI Trust &amp; Safety.</span>
-            </li>
-            <li class="update-item">
-                <span class="update-date">May 2025</span>
-                <span class="update-text">Received the <em>Andrew Stewart Memorial Graduate Prize</em> from the University of Alberta (5,000 CAD).</span>
-            </li>
-            <li class="update-item">
-                <span class="update-date">May 2024</span>
-                <span class="update-text">Presented <a href="https://dl.acm.org/doi/abs/10.5555/3635637.3663015"><em>Monitored Markov Decision Processes</em></a> at <em>AAMAS 2024</em>, Auckland, New Zealand.</span>
-            </li>
-            <li class="update-item">
-                <span class="update-date">Jan 2024</span>
-                <span class="update-text">Received the <a href="https://www.ualberta.ca/en/graduate-studies/fees-funding/scholarships-awards/engagement-scholarship.html">Graduate Student Engagement Scholarship (GSES)</a> from the University of Alberta (10,000 CAD).</span>
-            </li>
-            <li class="update-item">
-                <span class="update-date">Jan 2023</span>
-                <span class="update-text">Received the <a href="https://www.ualberta.ca/en/graduate-studies/fees-funding/scholarships-awards/engagement-scholarship.html">Graduate Student Engagement Scholarship (GSES)</a> from the University of Alberta (10,000 CAD).</span>
-            </li>
-            <!-- <li class="update-item">
-                <span class="update-date">Oct 2022</span>
-                <span class="update-text">Left <a href="https://ai.sony/">SonyAI</a> after three years as an AI Engineer in Tokyo, Japan.</span>
-            </li> -->
-            <li class="update-item">
-                <span class="update-date">Jan 2022</span>
-                <span class="update-text">Started PhD at the <a href="https://www.ualberta.ca/computing-science/index.html">Computing Science Department, University of Alberta</a>, advised by Prof. <a href="https://webdocs.cs.ualberta.ca/~bowling/">Michael Bowling</a>.</span>
-            </li>
-            <li class="update-item">
-                <span class="update-date">Jun 2020</span>
-                <span class="update-text">Joined <a href="https://ai.sony/">SonyAI</a> as an AI Engineer in Tokyo, Japan.</span>
-            </li>
-        </ul>
-    </div>
-
-    <!-- Work Experience -->
-    <div id="tab-experience" class="tab-panel">
-        <h2 class="tab-heading noselect">Work Experience</h2>
-
-        <div class="publication row clearfix">
-            <div class="row-media-small" style="background-image: url(fig/amii.jpeg);"></div>
-            <div class="row-text">
-                <span class="bold">Applied Research Scientist, AI Trust &amp; Safety — <a href="https://www.amii.ca/people/montaser-mohammedalamen">Alberta Machine Intelligence Institute (Amii)</a></span><br/>
-                Edmonton, Canada &nbsp;·&nbsp; July 2025 – Present<br/>
-                <ul class="exp-list">
-                    <li><span class="bold">Research Strategy:</span> Establishing Amii's safety research dual-track strategy using RL for risk assignment in generative models, and mitigating structural RL safety (uncertainty, non-stationarity, partial reward observability).</li>
-                    <li><span class="bold">Technical Collaboration:</span> Partnering with Cohere and national institutes — Canadian AI Safety Institute (CAISI), CIFAR Medical AI Working Group, Mila, the Vector Institute, and the National Research Council (NRC).</li>
-                    <li><span class="bold">Academic Outreach:</span> Directed a 10-session technical AI safety track for Amii's annual Upper Bound conference, serving an audience of over 11,000 attendees.</li>
-                    <li><span class="bold">Team Building:</span> Hired a Research Scientist and an ML Engineer while overhauling the technical interviews framework now adopted by Amii.</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="publication row clearfix">
-            <div class="row-media-small" style="background-image: url(fig/sonyai.png);"></div>
-            <div class="row-text">
-                <span class="bold">AI Engineer — <a href="https://ai.sony/">SonyAI</a></span><br/>
-                Tokyo, Japan &nbsp;·&nbsp; June 2020 – Oct 2020 &amp; Jan 2021 – Oct 2022<br/>
-                <ul class="exp-list">
-                    <li><span class="bold">Robotics Research:</span> Co-developed a table-tennis robot on the ACE Team capable of defeating professional players, resulting in a <a href="https://www.nature.com/articles/s41586-026-10338-5">Nature</a> publication.</li>
-                    <li><span class="bold">RL Policy:</span> Trained RL policies for targeted, high-precision ball returns and led the technical sub-team for robot serving.</li>
-                    <li><span class="bold">Sim-to-Real &amp; System Integration:</span> Built multi-agent simulation environments using self-play and goal-conditioned RL, successfully transferring trained policies onto real-time robot control loops.</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="publication row clearfix">
-            <div class="row-media-small" style="background-image: url(fig/uofa.png);"></div>
-            <div class="row-text">
-                <span class="bold">Research Associate — <a href="https://www.ualberta.ca/computing-science/index.html">University of Alberta</a></span><br/>
-                Edmonton, Canada &nbsp;·&nbsp; February 2020 – December 2020<br/>
-                <ul class="exp-list">
-                    <li>Formulated a novel robust optimization framework enabling autonomous agents to learn cautious behaviors in novel, out-of-distribution states, supervised by Prof. <a href="https://webdocs.cs.ualberta.ca/~bowling/">Michael Bowling</a>.</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="publication row clearfix">
-            <div class="row-media-small" style="background-image: url(fig/sony.png);"></div>
-            <div class="row-text">
-                <span class="bold">Machine Learning Intern — <a href="https://ai.sony/">SonyAI</a></span><br/>
-                Tokyo, Japan &nbsp;·&nbsp; July 2019 – January 2020<br/>
-                <ul class="exp-list">
-                    <li>Designed an RL environment and trained policies using imitation learning to acquire complex cooking skills from chef demonstrations, successfully deploying the models on physical robots.</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
-    <!-- Professional Service -->
-    <div id="tab-service" class="tab-panel">
-        <h2 class="tab-heading noselect">Professional Service</h2>
-
-        <h3 class="pub-section-heading">Reviewing</h3>
-
-        <div class="publication row clearfix">
-            <div class="row-text" style="max-width:100%; margin-left:0;">
-                <span class="bold">Transactions on Machine Learning Research (TMLR)</span> &nbsp;<span class="proj-tag">Journal Reviewer</span><br/>
-                2024 – Present
-            </div>
-        </div>
-
-        <div class="publication row clearfix">
-            <div class="row-text" style="max-width:100%; margin-left:0;">
-                <span class="bold">International Conference on Machine Learning (ICML)</span> &nbsp;<span class="proj-tag">Gold Reviewer</span><br/>
-                2026
-            </div>
-        </div>
-
-        <div class="publication row clearfix">
-            <div class="row-text" style="max-width:100%; margin-left:0;">
-                <span class="bold">Neural Information Processing Systems (NeurIPS)</span> &nbsp;<span class="proj-tag">Conference Reviewer</span><br/>
-                2025 &amp; 2026
-            </div>
-        </div>
-
-        <div class="publication row clearfix">
-            <div class="row-text" style="max-width:100%; margin-left:0;">
-                <span class="bold">Reinforcement Learning Conference (RLC)</span> &nbsp;<span class="proj-tag">Technical Reviewer</span><br/>
-                2025 &amp; 2026
-            </div>
-        </div>
-
-        <h3 class="pub-section-heading">Organization &amp; Committee</h3>
-
-        <div class="publication row clearfix">
-            <div class="row-text" style="max-width:100%; margin-left:0;">
-                <span class="bold">Adaptive and Learning Agents (ALA) Workshop at AAMAS</span> &nbsp;<span class="proj-tag">Workshop Co-organizer &amp; Area Chair</span><br/>
-                2025 &amp; 2026
-            </div>
-        </div>
-
-        <div class="publication row clearfix">
-            <div class="row-text" style="max-width:100%; margin-left:0;">
-                <span class="bold">Amii Fellows Trust &amp; Safety Research Proposals</span> &nbsp;<span class="proj-tag">Committee Member</span><br/>
-                2026
-            </div>
-        </div>
-
-        <div class="publication row clearfix">
-            <div class="row-text" style="max-width:100%; margin-left:0;">
-                <span class="bold">Cisco–University of Alberta Consortium for Agentic Research (CUACAR)</span> &nbsp;<span class="proj-tag">Research Proposal Reviewer</span><br/>
-                2026
-            </div>
-        </div>
-
-    </div>
-
-    <!-- Volunteering -->
-    <div id="tab-volunteering" class="tab-panel">
-        <h2 class="tab-heading noselect">Volunteering</h2>
-
-        <div class="publication row clearfix">
-            <div class="row-text" style="max-width:100%; margin-left:0;">
-                <span class="bold">Sudanese Machine Learning Community (SMLC)</span> &nbsp;<span class="proj-tag">Co-founder &amp; Core Representative</span><br/>
-                Dec 2019 – Present<br/>
-                <ul class="exp-list">
-                    <li>Co-founded an initiative building AI capacity locally, connecting resources to regional engineering candidates.</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="publication row clearfix">
-            <div class="row-text" style="max-width:100%; margin-left:0;">
-                <span class="bold">SMLC Mentorship Program</span> &nbsp;<span class="proj-tag">Academic Research Mentor</span><br/>
-                Dec 2019 – Present<br/>
-                <ul class="exp-list">
-                    <li>Mentoring undergraduate students at the University of Khartoum on custom baseline RL graduation projects.</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="publication row clearfix">
-            <div class="row-text" style="max-width:100%; margin-left:0;">
-                <span class="bold">EEESE Hackathon</span> &nbsp;<span class="proj-tag">Founder &amp; Event Coordinator</span><br/>
-                Apr 2016 – Aug 2016<br/>
-                <ul class="exp-list">
-                    <li>Established the first hackathon event in Sudan, coordinating 28 student researchers from 7 distinct universities.</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="publication row clearfix">
-            <div class="row-text" style="max-width:100%; margin-left:0;">
-                <span class="bold">Academic Committee for EEESE</span> &nbsp;<span class="proj-tag">Head of Committee</span><br/>
-                University of Khartoum &nbsp;·&nbsp; Aug 2015 – July 2016
-            </div>
-        </div>
-
-    </div>
-
+<div class="footer">
+    <div class="footer-content">Last updated: July 2026</div>
 </div>
 
 <script>
-    const tabs = document.querySelectorAll('.tab-btn');
+    const tabs = document.querySelectorAll('.sidebar .tab-btn[data-tab]');
     const panels = document.querySelectorAll('.tab-panel');
 
     function activateTab(id) {
         tabs.forEach(t => t.classList.toggle('active', t.dataset.tab === id));
         panels.forEach(p => p.classList.toggle('active', p.id === 'tab-' + id));
         history.replaceState(null, '', '#' + id);
+        document.getElementById('sidebar').classList.remove('open');
+        window.scrollTo(0, 0);
     }
 
     tabs.forEach(btn => btn.addEventListener('click', () => activateTab(btn.dataset.tab)));
 
-    // Restore tab from URL hash on load
     const hash = location.hash.replace('#', '');
     if (hash && document.getElementById('tab-' + hash)) activateTab(hash);
-</script>
 
-<div class="footer">
-    <div class="footer-content">
-        Last updated: July 2026
-    </div>
-</div>
+    document.getElementById('menuToggle').addEventListener('click', () => {
+        document.getElementById('sidebar').classList.toggle('open');
+    });
+</script>
 
 </body>
 </html>
